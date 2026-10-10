@@ -1,7 +1,7 @@
 {
   "doc_id": "P7-D2",
   "provenance": {
-    "file_sha256": "12c9fdca30b69360c09614d47d68f920fd4a5897e830bcb7f29891884e0b081c",
+    "file_sha256": "1837113e2bd4134001d15a60177178031795297f549e6eb10c8d9e5c2822fc69",
     "file_name": "P7-D2.pdf",
     "pages": 2,
     "extraction_method": "vision_llm",
@@ -9,9 +9,9 @@
     "model_version": "mock-v1",
     "prompt_version": "v1.1-6",
     "contract_version": "1.1",
-    "cache_key": "f4e80603b92f31dc896db21a",
-    "extracted_at": "2026-10-10T13:09:16+00:00",
-    "extraction_hash": "9b35e5689a1b264bb764eec35318c660b2b432843471c270c88c25fcedd7d35e",
+    "cache_key": "d04900f66f35d2c1fcd99f1d",
+    "extracted_at": "2026-10-10T13:16:34+00:00",
+    "extraction_hash": "07b96ff8ebcc36e770932d0ba1249b709c9ac50a69b175a2cf5cdee60bf6c5f9",
     "redaction": {
       "status": "verified",
       "aadhaar": 0,
@@ -48,19 +48,22 @@
       "notes": []
     },
     "registered": {
-      "value": null,
-      "candidate": true,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "True",
-        "bbox": null
+        "quote": "Registration No:",
+        "bbox": [
+          138.9,
+          221.6,
+          189.2,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 75)"
-      ]
+      "notes": []
     },
     "registration_no": {
       "value": "SC-2018-44",
@@ -195,7 +198,7 @@
       "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "aadhaar",
+        "quote": "Aadhaar",
         "bbox": [
           449.9,
           477.2,
@@ -213,12 +216,12 @@
       "confidence": 0.692,
       "evidence": {
         "page": 1,
-        "quote": "False",
+        "quote": "signs personally",
         "bbox": null
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 60)"
+        "quote not found on page by the local reader (score 50)"
       ]
     },
     "acting_through_poa.poa_reg_no": {
@@ -253,19 +256,22 @@
       "notes": []
     },
     "property.survey_no": {
-      "value": null,
-      "candidate": "1007",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "1007",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "1007",
-        "bbox": null
+        "page": 2,
+        "quote": "Survey No: 1007",
+        "bbox": [
+          138.9,
+          277.2,
+          203.9,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 50)"
-      ]
+      "notes": []
     },
     "property.area_value": {
       "value": 1200.0,
@@ -286,19 +292,22 @@
       "notes": []
     },
     "property.area_unit": {
-      "value": null,
-      "candidate": "sqft",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
+        "page": 2,
         "quote": "1200 sq ft",
-        "bbox": null
+        "bbox": [
+          483.6,
+          277.2,
+          123.2,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 40)"
-      ]
+      "notes": []
     },
     "property.boundaries.N": {
       "value": "Hill Road",
@@ -404,9 +413,14 @@
       "status": "extracted",
       "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "0",
-        "bbox": null
+        "page": 2,
+        "quote": "consideration",
+        "bbox": [
+          776.9,
+          643.9,
+          164.3,
+          36.3
+        ]
       },
       "source": "vision_llm",
       "notes": []
@@ -418,24 +432,21 @@
       "confidence": 0.692,
       "evidence": {
         "page": 1,
-        "quote": "500",
+        "quote": "Rs 500",
         "bbox": null
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 33)"
+        "quote not found on page by the local reader (score 50)"
       ]
     }
   },
   "needs_review": [
-    "registered",
     "acting_through_poa.is_attorney",
-    "property.survey_no",
-    "property.area_unit",
     "stamp_duty"
   ],
   "language": "en",
   "writing": "printed",
-  "overall_confidence": 0.924,
+  "overall_confidence": 0.962,
   "retake_required": false
 }

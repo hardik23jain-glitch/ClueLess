@@ -13,14 +13,14 @@
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "True"
+      "quote": "Registered at"
     },
     "registration_no": {
       "value": "1160/2022",
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "पंजीकरण संख्या: 1160/2022"
+      "quote": "1160/2022"
     },
     "execution_date": {
       "value": "2022-11-15",
@@ -76,7 +76,7 @@
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "False"
+      "quote": "विक्रेता:"
     },
     "acting_through_poa.poa_reg_no": {
       "value": null,
@@ -96,8 +96,8 @@
       "value": "55",
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
-      "quote": "55"
+      "page": 2,
+      "quote": "सर्वे नंबर 55"
     },
     "property.area_value": {
       "value": 1000,
@@ -110,7 +110,7 @@
       "value": "sqft",
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
+      "page": 2,
       "quote": "वर्ग फुट"
     },
     "property.boundaries.N": {
@@ -142,11 +142,11 @@
       "quote": "पश्चिम: भूखंड 4"
     },
     "parent_ref.doc_ref": {
-      "value": "Deed No. 55 of 2015",
+      "value": "55/2015",
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "Deed No. 55 of 2015"
+      "quote": "55/2015"
     },
     "parent_ref.claimed_acquisition_year": {
       "value": 2015,
@@ -159,15 +159,15 @@
       "value": 750000,
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
-      "quote": "750000"
+      "page": 2,
+      "quote": "प्रतिफल"
     },
     "stamp_duty": {
       "value": 45000,
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "45000"
+      "quote": "Rs 45,000"
     }
   }
 }

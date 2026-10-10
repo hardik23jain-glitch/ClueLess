@@ -13,7 +13,7 @@
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "True"
+      "quote": "Registration No:"
     },
     "registration_no": {
       "value": "101/2010",
@@ -69,14 +69,14 @@
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "aadhaar"
+      "quote": "Aadhaar"
     },
     "acting_through_poa.is_attorney": {
       "value": false,
       "state": "read",
       "confidence": 0.98,
       "page": 1,
-      "quote": "False"
+      "quote": "signs personally"
     },
     "acting_through_poa.poa_reg_no": {
       "value": null,
@@ -96,8 +96,8 @@
       "value": "401",
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
-      "quote": "401"
+      "page": 2,
+      "quote": "Survey No: 401"
     },
     "property.area_value": {
       "value": 1200,
@@ -110,7 +110,7 @@
       "value": "sqft",
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
+      "page": 2,
       "quote": "1200 sq ft"
     },
     "property.boundaries.N": {
@@ -159,15 +159,15 @@
       "value": 250000,
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
-      "quote": "250000"
+      "page": 2,
+      "quote": "consideration"
     },
     "stamp_duty": {
       "value": 15000,
       "state": "read",
       "confidence": 0.98,
-      "page": 1,
-      "quote": "15000"
+      "page": 2,
+      "quote": "Rs 15,000"
     }
   }
 }

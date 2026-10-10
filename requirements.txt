@@ -8,3 +8,4 @@ python-dotenv
 google-genai         # if provider = gemini
 anthropic            # if provider = anthropic
 pytest
+streamlit

@@ -95,8 +95,30 @@ def _make_hindi_pdf(html_content: str, out_pdf: Path) -> None:
         shutil.rmtree(tmp, ignore_errors=True)
 
 
-def _build_model_reply(fields_dict: Dict[str, Any], lang: str = "en") -> str:
+def _find_page_and_quote(doc_pdf: fitz.Document, candidate_quotes: List[str]) -> tuple[int, str]:
+    """Find which 1-based page contains any of the candidate quotes."""
+    for q in candidate_quotes:
+        if not q:
+            continue
+        for page_idx in range(doc_pdf.page_count):
+            text = doc_pdf[page_idx].get_text()
+            if q in text:
+                return page_idx + 1, q
+    # Case-insensitive / partial fallback
+    for q in candidate_quotes:
+        if not q:
+            continue
+        for page_idx in range(doc_pdf.page_count):
+            text = doc_pdf[page_idx].get_text()
+            if q.lower() in text.lower():
+                idx = text.lower().find(q.lower())
+                return page_idx + 1, text[idx:idx + len(q)]
+    return 1, candidate_quotes[0] if candidate_quotes else ""
+
+
+def _build_model_reply(fields_dict: Dict[str, Any], pdf_path: Path, lang: str = "en") -> str:
     """Build canned model reply in the format expected by MockProvider and parse_model_json."""
+    doc_pdf = fitz.open(str(pdf_path))
     fields_out = {}
     for k in FIELD_KEYS:
         val = fields_dict.get(k)
@@ -109,8 +131,35 @@ def _build_model_reply(fields_dict: Dict[str, Any], lang: str = "en") -> str:
                 "quote": None,
             }
         else:
-            quote_text = fields_dict.get(f"_quote_{k}", str(val))
-            page_num = fields_dict.get(f"_page_{k}", 1)
+            explicit_quote = fields_dict.get(f"_quote_{k}")
+            candidates = []
+            if explicit_quote:
+                candidates.append(explicit_quote)
+            if k == "registered":
+                candidates.extend(["Registered at", "पंजीकृत", "Registration No:", "पंजीकरण संख्या:"])
+            elif k == "acting_through_poa.is_attorney":
+                if val is False:
+                    candidates.extend(["signs personally", "व्यक्तिगत रूप", "SELLER:", "विक्रेता:"])
+                else:
+                    candidates.extend(["attorney", "मुख्तार", "Power of Attorney"])
+            elif k == "property.area_unit":
+                candidates.extend(["sq ft", "sqft", "वर्ग फुट", "वर्गफुट"])
+            elif k == "consideration":
+                candidates.extend([f"Rs {val:,}" if isinstance(val, (int, float)) else str(val), "consideration", "प्रतिफल", "Rs", "रुपये"])
+            elif k == "stamp_duty":
+                candidates.extend([f"Rs {val:,}" if isinstance(val, (int, float)) else str(val), "Stamp duty", "स्टाम्प शुल्क"])
+            elif k == "property.survey_no":
+                candidates.extend([f"Survey No: {val}", f"Survey No {val}", f"सर्वे नंबर {val}", "Survey No", "सर्वे नंबर"])
+            elif k == "parent_ref.claimed_acquisition_year":
+                candidates.extend([str(val), f"year {val}", f"वर्ष {val}"])
+            candidates.append(str(val))
+
+            explicit_page = fields_dict.get(f"_page_{k}")
+            if explicit_page:
+                page_num, quote_text = explicit_page, (explicit_quote or candidates[0])
+            else:
+                page_num, quote_text = _find_page_and_quote(doc_pdf, candidates)
+
             fields_out[k] = {
                 "value": val,
                 "state": "read",
@@ -1181,8 +1230,9 @@ h1{{text-align:center;font-size:20pt}} .pb{{page-break-after:always}}</style></h
             "property.area_value": 1000, "property.area_unit": "sqft",
             "property.boundaries.N": "नदी", "property.boundaries.E": "भूखंड 2",
             "property.boundaries.S": "नाला", "property.boundaries.W": "भूखंड 4",
-            "parent_ref.doc_ref": "Deed No. 55 of 2015", "parent_ref.claimed_acquisition_year": 2015,
+            "parent_ref.doc_ref": "55/2015", "parent_ref.claimed_acquisition_year": 2015,
             "consideration": 750000, "stamp_duty": 45000,
+            "_quote_parent_ref.doc_ref": "55/2015",
             "_quote_doc_type": "विक्रय पत्र",
             "_quote_registration_no": "पंजीकरण संख्या: 1160/2022",
             "_quote_execution_date": "15/11/2022",
@@ -1240,7 +1290,7 @@ def main():
         print(f"  [PDF] Wrote {pdf_path}")
 
         # 2. Write canned model reply
-        reply_json = _build_model_reply(d["fields"], lang=d.get("lang", "en"))
+        reply_json = _build_model_reply(d["fields"], pdf_path, lang=d.get("lang", "en"))
         mock_file = mock_dir / f"{doc_id}.json"
         mock_file.write_text(reply_json, encoding="utf-8")
         print(f"  [MOCK] Wrote {mock_file}")

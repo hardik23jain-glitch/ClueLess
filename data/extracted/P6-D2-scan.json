@@ -1,7 +1,7 @@
 {
   "doc_id": "P6-D2-scan",
   "provenance": {
-    "file_sha256": "33ee9c3317a5dceefeba551f951ef3709843418aa3bbac0cbfd3610392330fbc",
+    "file_sha256": "e03b498485c37833c13c1d156435f199c1dc495390d27c66ad5f9b97431eaf55",
     "file_name": "P6-D2-scan.pdf",
     "pages": 2,
     "extraction_method": "vision_llm",
@@ -9,9 +9,9 @@
     "model_version": "mock-v1",
     "prompt_version": "v1.1-6",
     "contract_version": "1.1",
-    "cache_key": "f52f4ac21899c3aaa71164b4",
-    "extracted_at": "2026-10-10T13:09:16+00:00",
-    "extraction_hash": "0164063b4fd5ff3ec9ee0e9abcf5917cc81e615e0d96d898a94a986fb5717adc",
+    "cache_key": "7f65fa35653cc8322740d8d0",
+    "extracted_at": "2026-10-10T13:16:34+00:00",
+    "extraction_hash": "d69648ab74e231cde4e60b44b6774704aecb8c10e903e29df4dd83ae89ec7a96",
     "redaction": {
       "status": "verified",
       "aadhaar": 0,
@@ -53,18 +53,22 @@
       ]
     },
     "registered": {
-      "value": null,
-      "candidate": true,
-      "status": "unreadable",
-      "confidence": 0.588,
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
       "evidence": {
         "page": 1,
-        "quote": "True",
-        "bbox": null
+        "quote": "Registration No:",
+        "bbox": [
+          140.0,
+          230.0,
+          187.0,
+          27.0
+        ]
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 75)",
         "page image quality is poor"
       ]
     },
@@ -215,7 +219,7 @@
       "confidence": 0.843,
       "evidence": {
         "page": 1,
-        "quote": "aadhaar",
+        "quote": "Aadhaar",
         "bbox": [
           306.0,
           485.0,
@@ -235,12 +239,12 @@
       "confidence": 0.843,
       "evidence": {
         "page": 1,
-        "quote": "acting through her duly appointed attorney Amit Joshi",
+        "quote": "attorney",
         "bbox": [
-          139.0,
-          375.0,
-          899.0,
-          82.0
+          318.0,
+          433.0,
+          95.0,
+          24.0
         ]
       },
       "source": "vision_llm",
@@ -284,18 +288,22 @@
       ]
     },
     "property.survey_no": {
-      "value": null,
-      "candidate": "906",
-      "status": "unreadable",
-      "confidence": 0.588,
+      "value": "906",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
       "evidence": {
-        "page": 1,
-        "quote": "906",
-        "bbox": null
+        "page": 2,
+        "quote": "Survey No: 906",
+        "bbox": [
+          141.0,
+          284.0,
+          187.0,
+          26.0
+        ]
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 67)",
         "page image quality is poor"
       ]
     },
@@ -320,18 +328,22 @@
       ]
     },
     "property.area_unit": {
-      "value": null,
-      "candidate": "sqft",
-      "status": "unreadable",
-      "confidence": 0.588,
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
       "evidence": {
-        "page": 1,
+        "page": 2,
         "quote": "1000 sq ft",
-        "bbox": null
+        "bbox": [
+          473.0,
+          285.0,
+          119.0,
+          26.0
+        ]
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 40)",
         "page image quality is poor"
       ]
     },
@@ -456,48 +468,51 @@
       ]
     },
     "consideration": {
-      "value": null,
-      "candidate": 800000.0,
-      "status": "unreadable",
-      "confidence": 0.588,
+      "value": 800000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
       "evidence": {
-        "page": 1,
-        "quote": "800000",
-        "bbox": null
+        "page": 2,
+        "quote": "consideration",
+        "bbox": [
+          200.0,
+          651.0,
+          163.0,
+          21.0
+        ]
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 33)",
         "page image quality is poor"
       ]
     },
     "stamp_duty": {
-      "value": null,
-      "candidate": 48000.0,
-      "status": "unreadable",
-      "confidence": 0.588,
+      "value": 48000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
       "evidence": {
-        "page": 1,
-        "quote": "48000",
-        "bbox": null
+        "page": 2,
+        "quote": "Rs 48,000",
+        "bbox": [
+          347.0,
+          707.0,
+          124.0,
+          24.0
+        ]
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 40)",
         "page image quality is poor"
       ]
     }
   },
   "needs_review": [
-    "registered",
-    "acting_through_poa.poa_reg_no",
-    "property.survey_no",
-    "property.area_unit",
-    "consideration",
-    "stamp_duty"
+    "acting_through_poa.poa_reg_no"
   ],
   "language": "en",
   "writing": "printed",
-  "overall_confidence": 0.755,
+  "overall_confidence": 0.808,
   "retake_required": false
 }

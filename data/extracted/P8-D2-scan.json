@@ -1,7 +1,7 @@
 {
   "doc_id": "P8-D2-scan",
   "provenance": {
-    "file_sha256": "511a03173cdb97cc7efe021647d3d9c1deea3d444daf99f6aadbc8dc28c2abf8",
+    "file_sha256": "fd0f95c3469a952ccdce57e9fff416b7d9f61aed98f218cb6202fbf6f48c576d",
     "file_name": "P8-D2-scan.pdf",
     "pages": 2,
     "extraction_method": "vision_llm",
@@ -9,9 +9,9 @@
     "model_version": "mock-v1",
     "prompt_version": "v1.1-6",
     "contract_version": "1.1",
-    "cache_key": "8566725b45a5bb12fd6d743f",
-    "extracted_at": "2026-10-10T13:09:25+00:00",
-    "extraction_hash": "9fa69a1b9be9ebd8c5e2a6a840bb0c7e1f696bd16c451db381f8d7b9e87fc8b8",
+    "cache_key": "e0e314bbddc9df0604efef2b",
+    "extracted_at": "2026-10-10T13:16:42+00:00",
+    "extraction_hash": "20bec99f67fb6325c0cba7114d1b839d6bad29317a8ed224746a8934f42df61d",
     "redaction": {
       "status": "verified",
       "aadhaar": 0,
@@ -54,12 +54,12 @@
       "confidence": 0.692,
       "evidence": {
         "page": 1,
-        "quote": "True",
+        "quote": "Registered at",
         "bbox": null
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 0)"
+        "quote not found on page by the local reader (score 12)"
       ]
     },
     "registration_no": {
@@ -69,13 +69,8 @@
       "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "पंजीकरण संख्या: 1160/2022",
-        "bbox": [
-          160.0,
-          311.0,
-          442.0,
-          44.0
-        ]
+        "quote": "1160/2022",
+        "bbox": null
       },
       "source": "vision_llm",
       "notes": []
@@ -194,19 +189,22 @@
       ]
     },
     "acting_through_poa.is_attorney": {
-      "value": null,
-      "candidate": false,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": false,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "False",
-        "bbox": null
+        "quote": "विक्रेता:",
+        "bbox": [
+          160.0,
+          526.0,
+          107.0,
+          41.0
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 0)"
-      ]
+      "notes": []
     },
     "acting_through_poa.poa_reg_no": {
       "value": null,
@@ -245,9 +243,14 @@
       "status": "extracted",
       "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "55",
-        "bbox": null
+        "page": 2,
+        "quote": "सर्वे नंबर 55",
+        "bbox": [
+          159.0,
+          371.0,
+          187.0,
+          47.0
+        ]
       },
       "source": "vision_llm",
       "notes": []
@@ -271,19 +274,22 @@
       "notes": []
     },
     "property.area_unit": {
-      "value": null,
-      "candidate": "sqft",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
+        "page": 2,
         "quote": "वर्ग फुट",
-        "bbox": null
+        "bbox": [
+          648.0,
+          371.0,
+          117.0,
+          52.0
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 62)"
-      ]
+      "notes": []
     },
     "property.boundaries.N": {
       "value": "नदी",
@@ -358,19 +364,17 @@
       "notes": []
     },
     "parent_ref.doc_ref": {
-      "value": null,
-      "candidate": "Deed No. 55 of 2015",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "55/2015",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "Deed No. 55 of 2015",
+        "quote": "55/2015",
         "bbox": null
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 50)"
-      ]
+      "notes": []
     },
     "parent_ref.claimed_acquisition_year": {
       "value": 2015,
@@ -386,19 +390,22 @@
       "notes": []
     },
     "consideration": {
-      "value": null,
-      "candidate": 750000.0,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": 750000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "750000",
-        "bbox": null
+        "page": 2,
+        "quote": "प्रतिफल",
+        "bbox": [
+          261.0,
+          872.0,
+          127.0,
+          40.0
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 33)"
-      ]
+      "notes": []
     },
     "stamp_duty": {
       "value": null,
@@ -407,26 +414,22 @@
       "confidence": 0.692,
       "evidence": {
         "page": 1,
-        "quote": "45000",
+        "quote": "Rs 45,000",
         "bbox": null
       },
       "source": "vision_llm",
       "notes": [
-        "quote not found on page by the local reader (score 40)"
+        "quote not found on page by the local reader (score 44)"
       ]
     }
   },
   "needs_review": [
     "registered",
     "party.id_type",
-    "acting_through_poa.is_attorney",
-    "property.area_unit",
-    "parent_ref.doc_ref",
-    "consideration",
     "stamp_duty"
   ],
   "language": "hi",
   "writing": "printed",
-  "overall_confidence": 0.903,
+  "overall_confidence": 0.953,
   "retake_required": false
 }

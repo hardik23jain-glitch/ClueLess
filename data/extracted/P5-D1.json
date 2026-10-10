@@ -1,7 +1,7 @@
 {
   "doc_id": "P5-D1",
   "provenance": {
-    "file_sha256": "05238682db95daec0719c6ab6f0e6da6341e1bf22690ca00c7b4606ab9521532",
+    "file_sha256": "630cbc56b67b656757473a3224585148a647e9f3bc653d82b37f4897756dd8ad",
     "file_name": "P5-D1.pdf",
     "pages": 2,
     "extraction_method": "vision_llm",
@@ -9,9 +9,9 @@
     "model_version": "mock-v1",
     "prompt_version": "v1.1-6",
     "contract_version": "1.1",
-    "cache_key": "bbfdcef8a04d3fc338fb6459",
-    "extracted_at": "2026-10-10T13:09:12+00:00",
-    "extraction_hash": "20b2f73018a1a36e6719a665bb8013b7c1f3e417b8df0523799bf81f9846b59d",
+    "cache_key": "44601bcc74f0833c08a35cf5",
+    "extracted_at": "2026-10-10T13:16:29+00:00",
+    "extraction_hash": "4057a758be98335abf9f7542f9442066f21fbebf0823583e569f422eaa9cd5fe",
     "redaction": {
       "status": "verified",
       "aadhaar": 0,
@@ -25,7 +25,7 @@
       "reasons": []
     },
     "local_text": "text_layer",
-    "review": "skipped: node or cline_agent not available",
+    "review": "not_needed",
     "warnings": []
   },
   "fields": {
@@ -48,19 +48,22 @@
       "notes": []
     },
     "registered": {
-      "value": null,
-      "candidate": true,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "True",
-        "bbox": null
+        "quote": "Registration No:",
+        "bbox": [
+          138.9,
+          221.6,
+          189.2,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 50)"
-      ]
+      "notes": []
     },
     "registration_no": {
       "value": "330/2012",
@@ -195,7 +198,7 @@
       "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "aadhaar",
+        "quote": "Aadhaar",
         "bbox": [
           306.1,
           421.6,
@@ -207,19 +210,22 @@
       "notes": []
     },
     "acting_through_poa.is_attorney": {
-      "value": null,
-      "candidate": false,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": false,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
         "page": 1,
-        "quote": "False",
-        "bbox": null
+        "quote": "SELLER:",
+        "bbox": [
+          138.9,
+          366.1,
+          108.5,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 67)"
-      ]
+      "notes": []
     },
     "acting_through_poa.poa_reg_no": {
       "value": null,
@@ -253,19 +259,22 @@
       "notes": []
     },
     "property.survey_no": {
-      "value": null,
-      "candidate": "805",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "805",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "805",
-        "bbox": null
+        "page": 2,
+        "quote": "Survey No: 805",
+        "bbox": [
+          138.9,
+          277.2,
+          189.2,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 67)"
-      ]
+      "notes": []
     },
     "property.area_value": {
       "value": 1000.0,
@@ -286,19 +295,22 @@
       "notes": []
     },
     "property.area_unit": {
-      "value": null,
-      "candidate": "sqft",
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
+        "page": 2,
         "quote": "1000 sq ft",
-        "bbox": null
+        "bbox": [
+          468.9,
+          277.2,
+          123.2,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 40)"
-      ]
+      "notes": []
     },
     "property.boundaries.N": {
       "value": "Public Road",
@@ -399,46 +411,45 @@
       "notes": []
     },
     "consideration": {
-      "value": null,
-      "candidate": 400000.0,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": 400000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "400000",
-        "bbox": null
+        "page": 2,
+        "quote": "consideration",
+        "bbox": [
+          199.0,
+          643.9,
+          164.3,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 33)"
-      ]
+      "notes": []
     },
     "stamp_duty": {
-      "value": null,
-      "candidate": 24000.0,
-      "status": "unreadable",
-      "confidence": 0.692,
+      "value": 24000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
       "evidence": {
-        "page": 1,
-        "quote": "24000",
-        "bbox": null
+        "page": 2,
+        "quote": "Rs 24,000",
+        "bbox": [
+          344.2,
+          699.4,
+          127.6,
+          36.3
+        ]
       },
       "source": "vision_llm",
-      "notes": [
-        "quote not found on page by the local reader (score 60)"
-      ]
+      "notes": []
     }
   },
-  "needs_review": [
-    "registered",
-    "acting_through_poa.is_attorney",
-    "property.survey_no",
-    "property.area_unit",
-    "consideration",
-    "stamp_duty"
-  ],
+  "needs_review": [],
   "language": "en",
   "writing": "printed",
-  "overall_confidence": 0.912,
+  "overall_confidence": 0.987,
   "retake_required": false
 }
