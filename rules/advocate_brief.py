@@ -55,6 +55,21 @@ LIBRARY: Dict[str, tuple] = {
     "FIELD_UNREADABLE": (
         "Part of the document could not be read reliably, so checks depending on it were not run. This says nothing about the deed itself.",
         "A clearer copy of the page."),
+    "BOUNDARY_PARENT_MISMATCH": (
+        "The property boundaries described in this deed differ from the boundaries in the earlier deed.",
+        "The survey map or demarcation report explaining the boundary changes."),
+    "DATE_ORDER_ANOMALY": (
+        "The dates on the documents appear out of order (such as an acquisition date after the deed date, or an earlier deed dated after this one).",
+        "Both deeds checked against the original registered copies to verify the sequence of transactions."),
+    "NAME_MISMATCH_TRANSLITERATION": (
+        "The seller's name is similar but not an exact match to the recorded owner or earlier buyer (possible spelling or transliteration variation).",
+        "An identity document or affidavit confirming both names refer to the same person."),
+    "UNREGISTERED_INSTRUMENT_IN_CHAIN": (
+        "An earlier instrument in the chain of documents is not registered. Under law, it is not a registered conveyance.",
+        "A registered deed of conveyance or registered title document."),
+    "PARCEL_ENCUMBRANCE": (
+        "The registry index records an active encumbrance (such as a mortgage or charge) on this property.",
+        "A clearance certificate, discharge deed, or No Objection Certificate (NOC) from the financial institution or encumbrance holder."),
 }
 
 NOT_CHECKED = [

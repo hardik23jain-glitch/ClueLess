@@ -1,4 +1,4 @@
-﻿# Registry State Simulator (Backend / P2)
+# Registry State Simulator (Backend / P2)
 
 # Step 2: State Registry Simulator.
 
@@ -89,6 +89,11 @@ class MockRegistry:
                 ("Laxman Rao", "Arjun Deshpande", 2008),
             ],
             "double_sold": None,
+            "encumbrances": [
+                {"type": "mortgage", "holder": "State Bank of India",
+                 "registered_year": 2010, "amount_inr": 1500000,
+                 "status": "active"},
+            ],
         },
         "AS000000000107": {
             "current_owner": "Priya Nair",
@@ -112,6 +117,14 @@ class MockRegistry:
         if parcel is None:
             return None
         return parcel["current_owner"]
+
+    @classmethod
+    def get_encumbrances(cls, ulpin: Optional[str]) -> List[Dict[str, Any]]:
+        """Return recorded encumbrances for a parcel (empty list if none or parcel unknown)."""
+        parcel = cls.get_parcel(ulpin)
+        if parcel is None:
+            return []
+        return parcel.get("encumbrances", [])
 
     @classmethod
     def check_for_parallel_conveyance(

@@ -14,12 +14,18 @@
 #   B1  Broken link: seller is not the registry's current owner
 #   B2  Possible double sale (parallel conveyance in the registry index)
 #   B3  Area conservation: draft area strictly greater than parent area
+#   B4  Boundary mismatch vs parent deed
+#   B5  Date-order anomalies (acquisition year after execution; parent dated after draft)
+#   B6  Possible same-person name mismatch (spelling/transliteration)
+#   B7  Unregistered instrument in the chain
+#   B8  Encumbrance on the parcel (from registry index)
 #
-# No LLM, no network, no fuzzy matching, no third-party dependencies.
+# No LLM, no network, no third-party dependencies (difflib is stdlib).
 
 from __future__ import annotations
 
 import calendar
+import difflib
 import logging
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -31,7 +37,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from ledger.mock_index import MockRegistry, normalize_name, normalize_ulpin
 
-RULESET_VERSION = "v1.1"   # recorded in every ledger entry for reproducibility
+RULESET_VERSION = "v1.2"   # recorded in every ledger entry for reproducibility
 
 logger = logging.getLogger(__name__)
 
@@ -53,6 +59,9 @@ NO_CONSIDERATION_DOC_TYPES = frozenset({'gift', 'will', 'partition'})
 
 # Non-sale instruments that can legitimately explain an ownership gap (B1 decoy).
 LINKING_DOC_TYPES = frozenset({'will', 'gift', 'partition', 'succession'})
+
+# Instrument types that are not registered conveyances (B7).
+UNREGISTERED_INSTRUMENT_TYPES = frozenset({'agreement_to_sell', 'poa', 'will'})
 
 
 # ---------------------------------------------------------------------------
@@ -126,6 +135,21 @@ def _names_match(a: Any, b: Any) -> bool:
 
 def _norm_unit(unit: Any) -> str:
     return '' if unit is None else str(unit).strip().lower()
+
+
+def _norm_boundary(text: Any) -> str:
+    """Normalise boundary text for comparison: lower, strip, collapse whitespace and punctuation."""
+    if text is None:
+        return ''
+    return ' '.join(str(text).lower().split())
+
+
+def _fuzzy_close(a: Any, b: Any, threshold: float = 0.85) -> bool:
+    """True if difflib ratio >= threshold but names are not an exact match (after normalisation)."""
+    na, nb = normalize_name(a), normalize_name(b)
+    if na == '' or nb == '' or na == nb:
+        return False
+    return difflib.SequenceMatcher(None, na, nb).ratio() >= threshold
 
 
 def _doc_id(doc: Dict[str, Any]) -> str:
@@ -446,8 +470,13 @@ class ClassBAdvisories:
                 doc_id, ulpin, seller_name, parcel, bundle_idx))
             flags.extend(self._b2_double_sale(
                 doc_id, ulpin, seller_name, bundle_idx))
+            flags.extend(self._b8_encumbrance(doc_id, ulpin))
 
         flags.extend(self._b3_area_conservation(doc, doc_id, bundle_idx))
+        flags.extend(self._b4_boundary_mismatch(doc, doc_id, bundle_idx))
+        flags.extend(self._b5_date_order(doc, doc_id, bundle_idx))
+        flags.extend(self._b6_name_mismatch(doc, doc_id, bundle_idx))
+        flags.extend(self._b7_unregistered_instrument(doc_id, bundle_idx, doc=doc))
         return flags
 
     # ---- B0: registry cross-check could not run (coverage gap) --------------
@@ -571,7 +600,184 @@ class ClassBAdvisories:
                 'request a demarcation or survey report if the parent parcel was larger than recorded.',
                 field_path='property.area_value',
                 rule_id='B3',
-                )]
+            )]
+
+    # ---- B4: Boundary mismatch ----------------------------------------------
+    def _b4_boundary_mismatch(self, doc, doc_id, bundle_idx):
+        draft_boundaries = _field(doc, 'property.boundaries')
+        if not isinstance(draft_boundaries, dict):
+            return []
+        parent_ref, parent_doc = _resolve_parent(doc, bundle_idx)
+        if not parent_ref:
+            return []
+        parent_boundaries = _parent_attr(
+            parent_ref, parent_doc, 'boundaries', 'property.boundaries')
+        if not isinstance(parent_boundaries, dict):
+            return []
+        mismatches = []
+        for side in ('N', 'E', 'S', 'W'):
+            d = _norm_boundary(draft_boundaries.get(side))
+            p = _norm_boundary(parent_boundaries.get(side))
+            if d != '' and p != '' and d != p:
+                mismatches.append(
+                    f"{side}: draft '{draft_boundaries.get(side)}' vs parent '{parent_boundaries.get(side)}'")
+        if not mismatches:
+            return []
+        return [Flag(
+            severity=WARNING,
+            category=CATEGORY_TITLE_ADVISORY,
+            code='BOUNDARY_PARENT_MISMATCH',
+            document_id=doc_id,
+            title='Property boundary differs from parent deed',
+            detail=f"Boundary mismatch vs parent deed on: {', '.join(mismatches)}.",
+            mitigation='Class B advisory (not a refusal ground). Reconcile boundaries with the parent deed and survey map. '
+                       'Boundaries may legitimately change due to adjacent plot transfers or road widening.',
+            field_path='property.boundaries',
+            rule_id='B4',
+        )]
+
+    # ---- B5: Date-order anomalies -------------------------------------------
+    def _b5_date_order(self, doc, doc_id, bundle_idx):
+        flags: List[Flag] = []
+        exec_date = _parse_date(doc.get('execution_date'))
+
+        # Check 1: claimed_acquisition_year later than execution year
+        acq_year = _to_number(_field(doc, 'parent_ref.claimed_acquisition_year'))
+        if acq_year is not None and exec_date is not None:
+            if int(acq_year) > exec_date.year:
+                flags.append(Flag(
+                    severity=WARNING,
+                    category=CATEGORY_TITLE_ADVISORY,
+                    code='DATE_ORDER_ANOMALY',
+                    document_id=doc_id,
+                    title='Claimed acquisition year is after deed execution year',
+                    detail=f"Seller claims acquisition in {int(acq_year)}, which is after the deed execution year {exec_date.year}.",
+                    mitigation='Class B advisory (not a refusal ground). Verify the acquisition year against the prior title deed.',
+                    field_path='parent_ref.claimed_acquisition_year',
+                    rule_id='B5',
+                ))
+
+        # Check 2: parent deed dated after the draft deed
+        parent_ref, parent_doc = _resolve_parent(doc, bundle_idx)
+        if parent_ref:
+            parent_date = _parse_date(_parent_attr(
+                parent_ref, parent_doc, 'execution_date', 'execution_date'))
+            if parent_date is not None and exec_date is not None and parent_date > exec_date:
+                flags.append(Flag(
+                    severity=WARNING,
+                    category=CATEGORY_TITLE_ADVISORY,
+                    code='DATE_ORDER_ANOMALY',
+                    document_id=doc_id,
+                    title='Parent deed is dated after the draft deed',
+                    detail=f"Parent deed execution date ({parent_date.isoformat()}) is after draft deed date ({exec_date.isoformat()}).",
+                    mitigation='Class B advisory (not a refusal ground). Check the sequence of deeds; an antecedent title deed should predate the derivative transfer.',
+                    field_path='parent_ref.doc_ref',
+                    rule_id='B5',
+                ))
+
+        return flags
+
+    # ---- B6: Possible same-person name mismatch ------------------------------
+    def _b6_name_mismatch(self, doc, doc_id, bundle_idx):
+        seller_name = _field(doc, 'seller.name')
+        if _is_blank(seller_name):
+            return []
+
+        flags: List[Flag] = []
+        ulpin = _field(doc, 'property.ulpin')
+        parcel = None if _is_blank(ulpin) else MockRegistry.get_parcel(ulpin)
+        checked_names = set()
+
+        if parcel is not None:
+            owner = parcel.get('current_owner')
+            if owner and _fuzzy_close(seller_name, owner):
+                checked_names.add(normalize_name(owner))
+                flags.append(Flag(
+                    severity=WARNING,
+                    category=CATEGORY_TITLE_ADVISORY,
+                    code='NAME_MISMATCH_TRANSLITERATION',
+                    document_id=doc_id,
+                    title='Possible same-person name difference (spelling / transliteration)',
+                    detail=f"Seller '{seller_name}' is similar to recorded owner '{owner}' (similarity ratio >= 0.85). Possible same person, please confirm.",
+                    mitigation='Class B advisory (not a refusal ground). Verify party identity and obtain an affidavit or identity proof reconciling spelling/transliteration variations.',
+                    field_path='seller.name',
+                    rule_id='B6',
+                ))
+
+        parent_ref, parent_doc = _resolve_parent(doc, bundle_idx)
+        if parent_doc is not None:
+            p_buyer = _field(parent_doc, 'buyer.name')
+            if p_buyer and normalize_name(p_buyer) not in checked_names and _fuzzy_close(seller_name, p_buyer):
+                flags.append(Flag(
+                    severity=WARNING,
+                    category=CATEGORY_TITLE_ADVISORY,
+                    code='NAME_MISMATCH_TRANSLITERATION',
+                    document_id=doc_id,
+                    title='Possible same-person name difference (spelling / transliteration)',
+                    detail=f"Seller '{seller_name}' is similar to parent deed buyer '{p_buyer}' (similarity ratio >= 0.85). Possible same person, please confirm.",
+                    mitigation='Class B advisory (not a refusal ground). Verify party identity and obtain an affidavit or identity proof reconciling spelling/transliteration variations.',
+                    field_path='seller.name',
+                    rule_id='B6',
+                ))
+
+        return flags
+
+    # ---- B7: Unregistered instrument in the chain ---------------------------
+    def _b7_unregistered_instrument(self, doc_id, bundle_idx, doc=None):
+        flags: List[Flag] = []
+        docs_to_check = []
+        if doc is not None:
+            docs_to_check.append((doc_id, doc))
+        for b_id, b_doc in bundle_idx.items():
+            if b_id != doc_id:
+                docs_to_check.append((b_id, b_doc))
+
+        for target_id, d in docs_to_check:
+            doc_type = str(d.get('doc_type') or '').strip().lower()
+            reg = d.get('registered')
+            is_unregistered = (reg is False or str(reg).strip().lower() == 'false')
+            if doc_type in UNREGISTERED_INSTRUMENT_TYPES and is_unregistered:
+                pretty_type = doc_type.replace('_', ' ')
+                flags.append(Flag(
+                    severity=WARNING,
+                    category=CATEGORY_TITLE_ADVISORY,
+                    code='UNREGISTERED_INSTRUMENT_IN_CHAIN',
+                    document_id=doc_id,
+                    title=f"Unregistered instrument in chain ({pretty_type})",
+                    detail=f"Document '{target_id}' is an unregistered {pretty_type}. Under Indian registration law, this is not a registered conveyance.",
+                    mitigation='Class B advisory (not a refusal ground). An unregistered instrument is not a registered conveyance. Request a registered deed of conveyance or appropriate registered instrument.',
+                    field_path='registered',
+                    rule_id='B7',
+                ))
+        return flags
+
+    # ---- B8: Encumbrance on the parcel --------------------------------------
+    def _b8_encumbrance(self, doc_id, ulpin):
+        if _is_blank(ulpin):
+            return []
+        encs = MockRegistry.get_encumbrances(ulpin)
+        if not encs:
+            return []
+        flags = []
+        for enc in encs:
+            enc_type = enc.get('type', 'encumbrance')
+            holder = enc.get('holder', 'Unknown')
+            year = enc.get('registered_year', '')
+            amount = enc.get('amount_inr', '')
+            amt_str = f" of INR {amount:,}" if isinstance(amount, (int, float)) and amount else ""
+            year_str = f" registered in {year}" if year else ""
+            flags.append(Flag(
+                severity=WARNING,
+                category=CATEGORY_TITLE_ADVISORY,
+                code='PARCEL_ENCUMBRANCE',
+                document_id=doc_id,
+                title=f"Active encumbrance recorded on parcel ({enc_type})",
+                detail=f"Registry index records an active {enc_type}{year_str} with {holder}{amt_str} for ULPIN '{ulpin}'.",
+                mitigation='Class B advisory (not a refusal ground). Obtain a No Objection Certificate (NOC) or discharge deed from the encumbrance holder before proceeding.',
+                field_path='property.ulpin',
+                rule_id='B8',
+            ))
+        return flags
 
 
 # ---------------------------------------------------------------------------
