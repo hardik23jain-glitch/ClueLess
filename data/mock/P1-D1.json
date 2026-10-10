@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "101/2010",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 101/2010"
+    },
+    "execution_date": {
+      "value": "2010-04-12",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "made on 12/04/2010"
+    },
+    "presentation_date": {
+      "value": "2010-04-20",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 20/04/2010"
+    },
+    "seller.name": {
+      "value": "Jatin Borah",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Jatin Borah"
+    },
+    "seller.relation_name": {
+      "value": "Mukul Borah",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Mukul Borah"
+    },
+    "buyer.name": {
+      "value": "Bimal Das",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Bimal Das"
+    },
+    "buyer.relation_name": {
+      "value": "Ramesh Das",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Ramesh Das"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000101",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000101"
+    },
+    "property.survey_no": {
+      "value": "401",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "401"
+    },
+    "property.area_value": {
+      "value": 1200,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1200 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1200 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Public Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Public Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 2",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 2"
+    },
+    "property.boundaries.S": {
+      "value": "Drainage Lane",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Drainage Lane"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 4",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 4"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 250000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "250000"
+    },
+    "stamp_duty": {
+      "value": 15000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "15000"
+    }
+  }
+}

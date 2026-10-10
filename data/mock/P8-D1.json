@@ -1,0 +1,173 @@
+{
+  "language": "hi",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "विक्रय पत्र"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "55/2015",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "पंजीकरण संख्या: 55/2015"
+    },
+    "execution_date": {
+      "value": "2015-06-10",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "10/06/2015"
+    },
+    "presentation_date": {
+      "value": "2015-06-20",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "20/06/2015"
+    },
+    "seller.name": {
+      "value": "दिनेश कुमार",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "दिनेश कुमार"
+    },
+    "seller.relation_name": {
+      "value": "राम कुमार",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "राम कुमार"
+    },
+    "buyer.name": {
+      "value": "सुरेश वर्मा",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "सुरेश वर्मा"
+    },
+    "buyer.relation_name": {
+      "value": "प्रेम वर्मा",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "प्रेम वर्मा"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000109",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000109"
+    },
+    "property.survey_no": {
+      "value": "55",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "55"
+    },
+    "property.area_value": {
+      "value": 1000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1000 वर्ग फुट"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "वर्ग फुट"
+    },
+    "property.boundaries.N": {
+      "value": "मुख्य मार्ग",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "उत्तर: मुख्य मार्ग"
+    },
+    "property.boundaries.E": {
+      "value": "भूखंड 2",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "पूर्व: भूखंड 2"
+    },
+    "property.boundaries.S": {
+      "value": "नाला",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "दक्षिण: नाला"
+    },
+    "property.boundaries.W": {
+      "value": "भूखंड 4",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "पश्चिम: भूखंड 4"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 350000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "350000"
+    },
+    "stamp_duty": {
+      "value": 21000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "21000"
+    }
+  }
+}

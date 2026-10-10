@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "1050/2022",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 1050/2022"
+    },
+    "execution_date": {
+      "value": "2022-10-10",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 10/10/2022"
+    },
+    "presentation_date": {
+      "value": "2022-10-20",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 20/10/2022"
+    },
+    "seller.name": {
+      "value": "Gopal Chandra",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Gopal Chandra"
+    },
+    "seller.relation_name": {
+      "value": "Late Harish Chandra",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Late Harish Chandra"
+    },
+    "buyer.name": {
+      "value": "Bikash Roy",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Bikash Roy"
+    },
+    "buyer.relation_name": {
+      "value": "D. Roy",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "D. Roy"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000108",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000108"
+    },
+    "property.survey_no": {
+      "value": "1007",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1007"
+    },
+    "property.area_value": {
+      "value": 1200,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1200 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1200 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Hill Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Hill Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 15",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 15"
+    },
+    "property.boundaries.S": {
+      "value": "Green Park",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Green Park"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 13",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 13"
+    },
+    "parent_ref.doc_ref": {
+      "value": "Deed No. 150 of 2005",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Deed No. 150 of 2005"
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2018,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "2018"
+    },
+    "consideration": {
+      "value": 950000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "950000"
+    },
+    "stamp_duty": {
+      "value": 57000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "57000"
+    }
+  }
+}

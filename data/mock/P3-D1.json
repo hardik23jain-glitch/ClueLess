@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "550/2015",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 550/2015"
+    },
+    "execution_date": {
+      "value": "2015-02-10",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 10/02/2015"
+    },
+    "presentation_date": {
+      "value": "2015-02-18",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 18/02/2015"
+    },
+    "seller.name": {
+      "value": "Ravi Sharma",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Ravi Sharma"
+    },
+    "seller.relation_name": {
+      "value": "Mohan Sharma",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Mohan Sharma"
+    },
+    "buyer.name": {
+      "value": "Meera Patel",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Meera Patel"
+    },
+    "buyer.relation_name": {
+      "value": "Rajesh Patel",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Rajesh Patel"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000104",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000104"
+    },
+    "property.survey_no": {
+      "value": "603",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "603"
+    },
+    "property.area_value": {
+      "value": 1200,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1200 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1200 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 12",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 12"
+    },
+    "property.boundaries.S": {
+      "value": "Open Ground",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Open Ground"
+    },
+    "property.boundaries.W": {
+      "value": "Canal",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Canal"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 500000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "500000"
+    },
+    "stamp_duty": {
+      "value": 30000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "30000"
+    }
+  }
+}

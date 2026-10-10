@@ -1,0 +1,454 @@
+{
+  "doc_id": "P1-D2",
+  "provenance": {
+    "file_sha256": "f3357388d82151587f0fa8a6235013ca26792cbf97f8f68cdc67dd694d9f3e8b",
+    "file_name": "P1-D2.pdf",
+    "pages": 2,
+    "extraction_method": "vision_llm",
+    "provider": "mock",
+    "model_version": "mock-v1",
+    "prompt_version": "v1.1-6",
+    "contract_version": "1.1",
+    "cache_key": "f7d25315e7a55a764e00f0ff",
+    "extracted_at": "2026-10-10T13:09:06+00:00",
+    "extraction_hash": "dfb100ab0f27f33a07a268d4e80f6df4b12e3f5241061e2a3b847eec5194cb27",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 0,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "text_layer",
+    "review": "skipped: node or cline_agent not available",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "SALE DEED",
+        "bbox": [
+          138.9,
+          161.6,
+          171.5,
+          42.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": null,
+      "candidate": true,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "True",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 50)"
+      ]
+    },
+    "registration_no": {
+      "value": "202/2016",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "Registration No: 202/2016",
+        "bbox": [
+          138.9,
+          221.6,
+          306.6,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": "2016-08-15",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "executed on 15/08/2016",
+        "bbox": [
+          382.4,
+          310.5,
+          397.6,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": "2016-08-25",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "presented for registration on 25/08/2016",
+        "bbox": [
+          312.0,
+          588.3,
+          476.7,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": "Bimal Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "SELLER: Bimal Das",
+        "bbox": [
+          138.9,
+          366.1,
+          243.4,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": "Ramesh Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "Ramesh Das",
+        "bbox": [
+          468.9,
+          366.1,
+          159.8,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": "Anil Sharma",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "BUYER: Anil Sharma",
+        "bbox": [
+          138.9,
+          477.2,
+          256.6,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": "Mohan Sharma",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "Mohan Sharma",
+        "bbox": [
+          482.1,
+          477.2,
+          187.7,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "aadhaar",
+        "bbox": [
+          306.1,
+          421.6,
+          99.7,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.is_attorney": {
+      "value": null,
+      "candidate": false,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "False",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 67)"
+      ]
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": "AS000000000101",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "ULPIN: AS000000000101",
+        "bbox": [
+          138.9,
+          217.2,
+          351.6,
+          42.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": null,
+      "candidate": "401",
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "401",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 67)"
+      ]
+    },
+    "property.area_value": {
+      "value": 1200.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "1200 sq ft",
+        "bbox": [
+          468.9,
+          277.2,
+          123.2,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_unit": {
+      "value": null,
+      "candidate": "sqft",
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "1200 sq ft",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 50)"
+      ]
+    },
+    "property.boundaries.N": {
+      "value": "Public Road",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "North: Public Road",
+        "bbox": [
+          138.9,
+          388.3,
+          221.5,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": "Plot 2",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "East: Plot 2",
+        "bbox": [
+          138.9,
+          443.9,
+          135.0,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": "Drainage Lane",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "South: Drainage Lane",
+        "bbox": [
+          138.9,
+          499.4,
+          256.7,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": "Plot 4",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "West: Plot 4",
+        "bbox": [
+          138.9,
+          555.0,
+          142.3,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": "Deed No. 101 of 2010",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "Deed No. 101 of 2010",
+        "bbox": [
+          554.0,
+          532.7,
+          258.2,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2010,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "2010",
+        "bbox": [
+          753.5,
+          532.7,
+          58.7,
+          36.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": null,
+      "candidate": 450000.0,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "450000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 50)"
+      ]
+    },
+    "stamp_duty": {
+      "value": null,
+      "candidate": 27000.0,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "27000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 60)"
+      ]
+    }
+  },
+  "needs_review": [
+    "registered",
+    "acting_through_poa.is_attorney",
+    "property.survey_no",
+    "property.area_unit",
+    "consideration",
+    "stamp_duty"
+  ],
+  "language": "en",
+  "writing": "printed",
+  "overall_confidence": 0.915,
+  "retake_required": false
+}

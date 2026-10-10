@@ -1,0 +1,120 @@
+[
+  {
+    "parcel_id": "P1",
+    "doc_id": "P1-D3",
+    "bundle_doc_ids": [
+      "P1-D1",
+      "P1-D2"
+    ],
+    "expected_flags": [],
+    "notes": "Clean 3-deed chain: title passes cleanly from 2010 to 2016 to 2022. No flags (coverage panel still shows)."
+  },
+  {
+    "parcel_id": "P1-scan",
+    "doc_id": "P1-D3-scan",
+    "bundle_doc_ids": [
+      "P1-D1",
+      "P1-D2"
+    ],
+    "expected_flags": [],
+    "notes": "P1 draft degraded scan: clean 3-deed chain -> no flags."
+  },
+  {
+    "parcel_id": "P2",
+    "doc_id": "P2-D2",
+    "bundle_doc_ids": [
+      "P2-D1"
+    ],
+    "expected_flags": [
+      "B1"
+    ],
+    "notes": "Seller claims 2018 acquisition, but no transfer to them exists in registry or bundle -> B1 (BROKEN_OWNERSHIP_LINK)."
+  },
+  {
+    "parcel_id": "P3",
+    "doc_id": "P3-D2",
+    "bundle_doc_ids": [
+      "P3-D1"
+    ],
+    "expected_flags": [
+      "B2"
+    ],
+    "notes": "Same parcel sold twice: registry index records a parallel conveyance by seller -> B2 (PARALLEL_CONVEYANCE)."
+  },
+  {
+    "parcel_id": "P4",
+    "doc_id": "P4-D2",
+    "bundle_doc_ids": [
+      "P4-D1"
+    ],
+    "expected_flags": [
+      "B3"
+    ],
+    "notes": "Subdivision area exceeds parent: draft area 1500 sqft > parent area 1000 sqft -> B3 (AREA_EXCEEDS_PARENT)."
+  },
+  {
+    "parcel_id": "P5",
+    "doc_id": "P5-D2",
+    "bundle_doc_ids": [
+      "P5-D1"
+    ],
+    "expected_flags": [
+      "B4"
+    ],
+    "notes": "Boundary differs from parent deed on North side (Canal vs Road) -> B4 (BOUNDARY_PARENT_MISMATCH)."
+  },
+  {
+    "parcel_id": "P6",
+    "doc_id": "P6-D2",
+    "bundle_doc_ids": [
+      "P6-D1"
+    ],
+    "expected_flags": [
+      "A1"
+    ],
+    "notes": "Seller acts via attorney without registered POA number -> A1 (POA_REGISTRATION_MISSING)."
+  },
+  {
+    "parcel_id": "P6-scan",
+    "doc_id": "P6-D2-scan",
+    "bundle_doc_ids": [
+      "P6-D1"
+    ],
+    "expected_flags": [
+      "A1"
+    ],
+    "notes": "P6 draft degraded scan: seller acts via attorney without registered POA number -> A1."
+  },
+  {
+    "parcel_id": "P7",
+    "doc_id": "P7-D3",
+    "bundle_doc_ids": [
+      "P7-D1",
+      "P7-D2"
+    ],
+    "expected_flags": [],
+    "notes": "Decoy: seller/owner gap explained by registered succession document in bundle -> no B1."
+  },
+  {
+    "parcel_id": "P8",
+    "doc_id": "P8-D2",
+    "bundle_doc_ids": [
+      "P8-D1"
+    ],
+    "expected_flags": [
+      "B4"
+    ],
+    "notes": "Hindi deed (Devanagari): North boundary differs from parent deed -> B4 (BOUNDARY_PARENT_MISMATCH)."
+  },
+  {
+    "parcel_id": "P8-scan",
+    "doc_id": "P8-D2-scan",
+    "bundle_doc_ids": [
+      "P8-D1"
+    ],
+    "expected_flags": [
+      "B4"
+    ],
+    "notes": "P8 draft degraded scan: Hindi deed with North boundary differing from parent -> B4."
+  }
+]

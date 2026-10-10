@@ -1,0 +1,432 @@
+{
+  "doc_id": "P8-D2-scan",
+  "provenance": {
+    "file_sha256": "511a03173cdb97cc7efe021647d3d9c1deea3d444daf99f6aadbc8dc28c2abf8",
+    "file_name": "P8-D2-scan.pdf",
+    "pages": 2,
+    "extraction_method": "vision_llm",
+    "provider": "mock",
+    "model_version": "mock-v1",
+    "prompt_version": "v1.1-6",
+    "contract_version": "1.1",
+    "cache_key": "8566725b45a5bb12fd6d743f",
+    "extracted_at": "2026-10-10T13:09:25+00:00",
+    "extraction_hash": "9fa69a1b9be9ebd8c5e2a6a840bb0c7e1f696bd16c451db381f8d7b9e87fc8b8",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 0,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "tesseract",
+    "review": "skipped: node or cline_agent not available",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "विक्रय पत्र",
+        "bbox": [
+          633.0,
+          176.0,
+          229.0,
+          59.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": null,
+      "candidate": true,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "True",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 0)"
+      ]
+    },
+    "registration_no": {
+      "value": "1160/2022",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "पंजीकरण संख्या: 1160/2022",
+        "bbox": [
+          160.0,
+          311.0,
+          442.0,
+          44.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": "2022-11-15",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "15/11/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": "2022-11-25",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "25/11/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": "सुरेश वर्मा",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "सुरेश वर्मा",
+        "bbox": [
+          325.0,
+          525.0,
+          154.0,
+          52.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": "प्रेम वर्मा",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "प्रेम वर्मा",
+        "bbox": [
+          594.0,
+          525.0,
+          126.0,
+          47.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": "महेश शर्मा",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "महेश शर्मा",
+        "bbox": [
+          292.0,
+          744.0,
+          164.0,
+          46.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": "आर. शर्मा",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "आर. शर्मा",
+        "bbox": [
+          574.0,
+          744.0,
+          151.0,
+          46.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": null,
+      "candidate": "aadhaar",
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "aadhaar",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 0)"
+      ]
+    },
+    "acting_through_poa.is_attorney": {
+      "value": null,
+      "candidate": false,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "False",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 0)"
+      ]
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": "AS000000000109",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "ULPIN: AS000000000109",
+        "bbox": [
+          162.0,
+          276.0,
+          418.0,
+          30.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": "55",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "55",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_value": {
+      "value": 1000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "1000 वर्ग फुट",
+        "bbox": [
+          559.0,
+          371.0,
+          206.0,
+          52.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_unit": {
+      "value": null,
+      "candidate": "sqft",
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "वर्ग फुट",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 62)"
+      ]
+    },
+    "property.boundaries.N": {
+      "value": "नदी",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "उत्तर: नदी",
+        "bbox": [
+          159.0,
+          553.0,
+          152.0,
+          43.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": "भूखंड 2",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "पूर्व: भूखंड 2",
+        "bbox": [
+          159.0,
+          619.0,
+          184.0,
+          52.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": "नाला",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "दक्षिण: नाला",
+        "bbox": [
+          159.0,
+          692.0,
+          183.0,
+          43.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": "भूखंड 4",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 2,
+        "quote": "पश्चिम: भूखंड 4",
+        "bbox": [
+          159.0,
+          761.0,
+          224.0,
+          50.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "candidate": "Deed No. 55 of 2015",
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "Deed No. 55 of 2015",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 50)"
+      ]
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2015,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.992,
+      "evidence": {
+        "page": 1,
+        "quote": "2015",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": null,
+      "candidate": 750000.0,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "750000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 33)"
+      ]
+    },
+    "stamp_duty": {
+      "value": null,
+      "candidate": 45000.0,
+      "status": "unreadable",
+      "confidence": 0.692,
+      "evidence": {
+        "page": 1,
+        "quote": "45000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 40)"
+      ]
+    }
+  },
+  "needs_review": [
+    "registered",
+    "party.id_type",
+    "acting_through_poa.is_attorney",
+    "property.area_unit",
+    "parent_ref.doc_ref",
+    "consideration",
+    "stamp_duty"
+  ],
+  "language": "hi",
+  "writing": "printed",
+  "overall_confidence": 0.903,
+  "retake_required": false
+}

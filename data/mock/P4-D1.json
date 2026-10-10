@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "210/2014",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 210/2014"
+    },
+    "execution_date": {
+      "value": "2014-06-12",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 12/06/2014"
+    },
+    "presentation_date": {
+      "value": "2014-06-20",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 20/06/2014"
+    },
+    "seller.name": {
+      "value": "Gautam Bora",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Gautam Bora"
+    },
+    "seller.relation_name": {
+      "value": "Tarun Bora",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Tarun Bora"
+    },
+    "buyer.name": {
+      "value": "Pradeep Das",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Pradeep Das"
+    },
+    "buyer.relation_name": {
+      "value": "Biren Das",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Biren Das"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000103",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000103"
+    },
+    "property.survey_no": {
+      "value": "704",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "704"
+    },
+    "property.area_value": {
+      "value": 1000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1000 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1000 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Sector Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Sector Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 3",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 3"
+    },
+    "property.boundaries.S": {
+      "value": "Pathway",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Pathway"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 1",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 1"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 350000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "350000"
+    },
+    "stamp_duty": {
+      "value": 21000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "21000"
+    }
+  }
+}

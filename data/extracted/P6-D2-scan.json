@@ -1,0 +1,503 @@
+{
+  "doc_id": "P6-D2-scan",
+  "provenance": {
+    "file_sha256": "33ee9c3317a5dceefeba551f951ef3709843418aa3bbac0cbfd3610392330fbc",
+    "file_name": "P6-D2-scan.pdf",
+    "pages": 2,
+    "extraction_method": "vision_llm",
+    "provider": "mock",
+    "model_version": "mock-v1",
+    "prompt_version": "v1.1-6",
+    "contract_version": "1.1",
+    "cache_key": "f52f4ac21899c3aaa71164b4",
+    "extracted_at": "2026-10-10T13:09:16+00:00",
+    "extraction_hash": "0164063b4fd5ff3ec9ee0e9abcf5917cc81e615e0d96d898a94a986fb5717adc",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 0,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": false,
+      "retake": false,
+      "reasons": [
+        "blurry (sharpness 22 < 25)",
+        "low contrast (11 < 12)"
+      ]
+    },
+    "local_text": "tesseract",
+    "review": "skipped: node or cline_agent not available",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "SALE DEED",
+        "bbox": [
+          140.0,
+          171.0,
+          170.0,
+          25.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "registered": {
+      "value": null,
+      "candidate": true,
+      "status": "unreadable",
+      "confidence": 0.588,
+      "evidence": {
+        "page": 1,
+        "quote": "True",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 75)",
+        "page image quality is poor"
+      ]
+    },
+    "registration_no": {
+      "value": "930/2022",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "Registration No: 930/2022",
+        "bbox": [
+          140.0,
+          230.0,
+          305.0,
+          27.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "execution_date": {
+      "value": "2022-09-10",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "executed on 10/09/2022",
+        "bbox": [
+          383.0,
+          319.0,
+          396.0,
+          21.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "presentation_date": {
+      "value": "2022-09-20",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "presented for registration on 20/09/2022",
+        "bbox": [
+          312.0,
+          652.0,
+          475.0,
+          27.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "seller.name": {
+      "value": "Priya Nair",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "SELLER: Priya Nair",
+        "bbox": [
+          140.0,
+          374.0,
+          237.0,
+          27.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "seller.relation_name": {
+      "value": "M. Nair",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "M. Nair",
+        "bbox": [
+          470.0,
+          375.0,
+          90.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "buyer.name": {
+      "value": "Tarun Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "BUYER: Tarun Das",
+        "bbox": [
+          140.0,
+          541.0,
+          234.0,
+          24.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "buyer.relation_name": {
+      "value": "B. Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "B. Das",
+        "bbox": [
+          463.0,
+          541.0,
+          84.0,
+          24.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "aadhaar",
+        "bbox": [
+          306.0,
+          485.0,
+          100.0,
+          22.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "acting_through_poa.is_attorney": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "acting through her duly appointed attorney Amit Joshi",
+        "bbox": [
+          139.0,
+          375.0,
+          899.0,
+          82.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "unreadable",
+      "confidence": 0.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "model said 'not stated' but the page image is poor; cannot trust an absence"
+      ]
+    },
+    "property.ulpin": {
+      "value": "AS000000000107",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "ULPIN: AS000000000107",
+        "bbox": [
+          142.0,
+          226.0,
+          350.0,
+          26.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "property.survey_no": {
+      "value": null,
+      "candidate": "906",
+      "status": "unreadable",
+      "confidence": 0.588,
+      "evidence": {
+        "page": 1,
+        "quote": "906",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 67)",
+        "page image quality is poor"
+      ]
+    },
+    "property.area_value": {
+      "value": 1000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "1000 sq ft",
+        "bbox": [
+          473.0,
+          285.0,
+          119.0,
+          26.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "property.area_unit": {
+      "value": null,
+      "candidate": "sqft",
+      "status": "unreadable",
+      "confidence": 0.588,
+      "evidence": {
+        "page": 1,
+        "quote": "1000 sq ft",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 40)",
+        "page image quality is poor"
+      ]
+    },
+    "property.boundaries.N": {
+      "value": "East Road",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "North: East Road",
+        "bbox": [
+          141.0,
+          396.0,
+          201.0,
+          22.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "property.boundaries.E": {
+      "value": "Plot 9",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "East: Plot 9",
+        "bbox": [
+          142.0,
+          451.0,
+          133.0,
+          21.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "property.boundaries.S": {
+      "value": "Common Lane",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "South: Common Lane",
+        "bbox": [
+          141.0,
+          506.0,
+          256.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "property.boundaries.W": {
+      "value": "Plot 11",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 2,
+        "quote": "West: Plot 11",
+        "bbox": [
+          140.0,
+          563.0,
+          152.0,
+          21.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "parent_ref.doc_ref": {
+      "value": "Deed No. 440 of 2018",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "Deed No. 440 of 2018",
+        "bbox": [
+          555.0,
+          597.0,
+          257.0,
+          22.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2018,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.843,
+      "evidence": {
+        "page": 1,
+        "quote": "2018",
+        "bbox": [
+          754.0,
+          598.0,
+          58.0,
+          21.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": [
+        "page image quality is poor"
+      ]
+    },
+    "consideration": {
+      "value": null,
+      "candidate": 800000.0,
+      "status": "unreadable",
+      "confidence": 0.588,
+      "evidence": {
+        "page": 1,
+        "quote": "800000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 33)",
+        "page image quality is poor"
+      ]
+    },
+    "stamp_duty": {
+      "value": null,
+      "candidate": 48000.0,
+      "status": "unreadable",
+      "confidence": 0.588,
+      "evidence": {
+        "page": 1,
+        "quote": "48000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "quote not found on page by the local reader (score 40)",
+        "page image quality is poor"
+      ]
+    }
+  },
+  "needs_review": [
+    "registered",
+    "acting_through_poa.poa_reg_no",
+    "property.survey_no",
+    "property.area_unit",
+    "consideration",
+    "stamp_duty"
+  ],
+  "language": "en",
+  "writing": "printed",
+  "overall_confidence": 0.755,
+  "retake_required": false
+}

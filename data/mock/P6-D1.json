@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "440/2018",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 440/2018"
+    },
+    "execution_date": {
+      "value": "2018-03-12",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 12/03/2018"
+    },
+    "presentation_date": {
+      "value": "2018-03-20",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 20/03/2018"
+    },
+    "seller.name": {
+      "value": "K. Rajan",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: K. Rajan"
+    },
+    "seller.relation_name": {
+      "value": "S. Rajan",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "S. Rajan"
+    },
+    "buyer.name": {
+      "value": "Priya Nair",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Priya Nair"
+    },
+    "buyer.relation_name": {
+      "value": "M. Nair",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "M. Nair"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000107",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000107"
+    },
+    "property.survey_no": {
+      "value": "906",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "906"
+    },
+    "property.area_value": {
+      "value": 1000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1000 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1000 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "East Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: East Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 9",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 9"
+    },
+    "property.boundaries.S": {
+      "value": "Common Lane",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Common Lane"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 11",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 11"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 500000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "500000"
+    },
+    "stamp_duty": {
+      "value": 30000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "30000"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "820/2022",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 820/2022"
+    },
+    "execution_date": {
+      "value": "2022-08-15",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 15/08/2022"
+    },
+    "presentation_date": {
+      "value": "2022-08-25",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 25/08/2022"
+    },
+    "seller.name": {
+      "value": "Sneha Reddy",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Sneha Reddy"
+    },
+    "seller.relation_name": {
+      "value": "K.V. Reddy",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "K.V. Reddy"
+    },
+    "buyer.name": {
+      "value": "Manisha Iyer",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Manisha Iyer"
+    },
+    "buyer.relation_name": {
+      "value": "S. Iyer",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "S. Iyer"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000105",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000105"
+    },
+    "property.survey_no": {
+      "value": "805",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "805"
+    },
+    "property.area_value": {
+      "value": 1000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1000 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1000 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Canal and Waterway",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Canal and Waterway"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 6",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 6"
+    },
+    "property.boundaries.S": {
+      "value": "Avenue 2",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Avenue 2"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 4",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 4"
+    },
+    "parent_ref.doc_ref": {
+      "value": "Deed No. 330 of 2012",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Deed No. 330 of 2012"
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2012,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "2012"
+    },
+    "consideration": {
+      "value": 700000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "700000"
+    },
+    "stamp_duty": {
+      "value": 42000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "42000"
+    }
+  }
+}

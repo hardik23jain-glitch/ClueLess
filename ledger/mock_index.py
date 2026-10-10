@@ -102,6 +102,41 @@ class MockRegistry:
             ],
             "double_sold": None,
         },
+        "AS000000000101": {
+            "current_owner": "Anil Sharma",
+            "chain": [
+                ("Bimal Das", "Anil Sharma", 2016),
+            ],
+            "double_sold": None,
+        },
+        "AS000000000102": {
+            "current_owner": "Sunil Verma",
+            "chain": [
+                ("Dinesh Nath", "Sunil Verma", 2012),
+            ],
+            "double_sold": None,
+        },
+        "AS000000000103": {
+            "current_owner": "Pradeep Das",
+            "chain": [
+                ("Gautam Bora", "Pradeep Das", 2014),
+            ],
+            "double_sold": None,
+        },
+        "AS000000000108": {
+            "current_owner": "Late Harish Chandra",
+            "chain": [
+                ("Kamal Nath", "Late Harish Chandra", 2005),
+            ],
+            "double_sold": None,
+        },
+        "AS000000000109": {
+            "current_owner": "सुरेश वर्मा",
+            "chain": [
+                ("दिनेश कुमार", "सुरेश वर्मा", 2015),
+            ],
+            "double_sold": None,
+        },
     }
 
     @classmethod

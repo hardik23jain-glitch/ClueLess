@@ -1,0 +1,173 @@
+{
+  "language": "en",
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SALE DEED"
+    },
+    "registered": {
+      "value": true,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "True"
+    },
+    "registration_no": {
+      "value": "112/2012",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Registration No: 112/2012"
+    },
+    "execution_date": {
+      "value": "2012-05-10",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "executed on 10/05/2012"
+    },
+    "presentation_date": {
+      "value": "2012-05-18",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "presented for registration on 18/05/2012"
+    },
+    "seller.name": {
+      "value": "Dinesh Nath",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "SELLER: Dinesh Nath"
+    },
+    "seller.relation_name": {
+      "value": "Haren Nath",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "Haren Nath"
+    },
+    "buyer.name": {
+      "value": "Sunil Verma",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "BUYER: Sunil Verma"
+    },
+    "buyer.relation_name": {
+      "value": "O.P. Verma",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "O.P. Verma"
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "aadhaar"
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "False"
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "property.ulpin": {
+      "value": "AS000000000102",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "ULPIN: AS000000000102"
+    },
+    "property.survey_no": {
+      "value": "502",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "502"
+    },
+    "property.area_value": {
+      "value": 1000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "1000 sq ft"
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "1000 sq ft"
+    },
+    "property.boundaries.N": {
+      "value": "Main Road",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "North: Main Road"
+    },
+    "property.boundaries.E": {
+      "value": "Plot 5",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "East: Plot 5"
+    },
+    "property.boundaries.S": {
+      "value": "Private Lane",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "South: Private Lane"
+    },
+    "property.boundaries.W": {
+      "value": "Plot 7",
+      "state": "read",
+      "confidence": 0.98,
+      "page": 2,
+      "quote": "West: Plot 7"
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "state": "not_stated",
+      "confidence": 0.95,
+      "page": 1,
+      "quote": null
+    },
+    "consideration": {
+      "value": 300000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "300000"
+    },
+    "stamp_duty": {
+      "value": 18000,
+      "state": "read",
+      "confidence": 0.98,
+      "page": 1,
+      "quote": "18000"
+    }
+  }
+}
