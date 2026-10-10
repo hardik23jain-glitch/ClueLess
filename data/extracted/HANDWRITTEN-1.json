@@ -1,0 +1,353 @@
+{
+  "doc_id": "HANDWRITTEN-1",
+  "provenance": {
+    "file_sha256": "aa41d63cc4aefcf4f7b4dd25d37b974990fb747a164a89708ac90984962a5794",
+    "file_name": "HANDWRITTEN-1.jpg",
+    "pages": 1,
+    "extraction_method": "vision_llm",
+    "provider": "gemini",
+    "model_version": "gemini-flash-latest",
+    "prompt_version": "v1.1-5",
+    "contract_version": "1.1",
+    "cache_key": "a80dffc991c8dc896ae2f2c5",
+    "extracted_at": "2026-10-10T12:23:00+00:00",
+    "extraction_hash": "9c74c2b00a631dc54e20d4676a1a1b1aa073841ba498e5e0cde52b19fb1a0f29",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 0,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "tesseract",
+    "review": "not_needed",
+    "warnings": [
+      "page 1: page may be sideways and could not be verified; left as is",
+      "handwritten document: read by the vision model alone; handwritten ID numbers cannot be detected for redaction, so review before sharing."
+    ]
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "SALE DEED",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.83,
+      "evidence": {
+        "page": 1,
+        "quote": "Reg. No. 5173/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registration_no": {
+      "value": "5173/2022",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.842,
+      "evidence": {
+        "page": 1,
+        "quote": "Reg. No. 5173/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": "2022-05-14",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.842,
+      "evidence": {
+        "page": 1,
+        "quote": "made on 14/05/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": "2022-05-25",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.842,
+      "evidence": {
+        "page": 1,
+        "quote": "Presented for registration on 25/05/2022",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": "Mahesh Verma",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Mahesh Verma s/o Gopal Verma",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": "Gopal Verma",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Mahesh Verma s/o Gopal Verma",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": "Kavita Singh",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Kavita Singh w/o Ravi Singh",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": "Ravi Singh",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Kavita Singh w/o Ravi Singh",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Seller ID proof: Aadhaar",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.is_attorney": {
+      "value": false,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "who signs personally",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.99,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.99,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": "214",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Survey No 214",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_value": {
+      "value": 900.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "area 900 sq ft",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "sq ft",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.N": {
+      "value": "Main road",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "North: Main road",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": "Plot of Hari Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "East: Plot of Hari Das",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": "Plot of Meena Roy",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "South: Plot of Meena Roy",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": "Nala",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "West: Nala",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2012,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "bought this land in the year 2012",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": 380000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Consideration: Rs 3,80,000",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "stamp_duty": {
+      "value": 26600.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.846,
+      "evidence": {
+        "page": 1,
+        "quote": "Stamp duty paid: Rs 26,600",
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    }
+  },
+  "needs_review": [],
+  "language": "en",
+  "writing": "handwritten",
+  "overall_confidence": 0.861,
+  "retake_required": false
+}

@@ -60,6 +60,7 @@ streamlit run app/main.py
 ## Honest limitations
 
 - Synthetic data: results show the pipeline logic works, not real-world OCR robustness.
+- Languages tested: English and Hindi (typed, digital and scanned). **Assamese was not tested** (no native reader on the team and no sample available); Tesseract's Assamese pack is installed and the Bengali-Assamese digits are normalised, but accuracy there is unmeasured. Handwriting is read by the vision model alone.
 - A deed-only view can't see inheritance, mutations or litigation, so we report coverage gaps, not verdicts.
 - Double-sale detection needs registry-side access; the MVP simulates the index.
 - Draft Registration Bill 2025 statements are presented as draft.

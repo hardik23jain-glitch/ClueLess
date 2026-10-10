@@ -178,5 +178,35 @@
       "consideration": 450000,
       "stamp_duty": 31500
     }
+  },
+  {
+    "doc_id": "HANDWRITTEN-1",
+    "condition": "handwritten",
+    "language": "en",
+    "fields": {
+      "doc_type": "sale_deed",
+      "registered": true,
+      "registration_no": "5173/2022",
+      "execution_date": "2022-05-14",
+      "presentation_date": "2022-05-25",
+      "seller.name": "Mahesh Verma",
+      "seller.relation_name": "Gopal Verma",
+      "buyer.name": "Kavita Singh",
+      "buyer.relation_name": "Ravi Singh",
+      "party.id_type": "aadhaar",
+      "acting_through_poa.is_attorney": false,
+      "acting_through_poa.poa_reg_no": null,
+      "property.ulpin": null,
+      "property.survey_no": "214",
+      "property.area_value": 900,
+      "property.area_unit": "sqft",
+      "property.boundaries.N": "Main road",
+      "property.boundaries.E": "Plot of Hari Das",
+      "property.boundaries.S": "Plot of Meena Roy",
+      "property.boundaries.W": "Nala",
+      "parent_ref.claimed_acquisition_year": 2012,
+      "consideration": 380000,
+      "stamp_duty": 26600
+    }
   }
 ]
