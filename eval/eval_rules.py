@@ -25,6 +25,20 @@ from extract.config import Config
 from integration import run_risk_analysis
 
 
+# Input fields each rule depends on: if one of them is `unreadable`, an expected flag that does not fire is a
+# correct abstention (needs review), not a missed rule.
+RULE_FIELDS = {
+    "A1": {"acting_through_poa.poa_reg_no", "acting_through_poa.used", "acting_through_poa.is_attorney"},
+    "A2": {"property.area_value", "property.area_unit"},
+    "A3": {"property.boundaries.N", "property.boundaries.E", "property.boundaries.S", "property.boundaries.W"},
+    "A4": {"execution_date", "presentation_date"},
+    "A5": {"seller.name", "buyer.name"},
+    "A6": {"consideration"},
+    "A7": {"property.ulpin"},
+    "B3": {"property.area_value", "property.area_unit"},
+    "B4": {"property.boundaries.N", "property.boundaries.E", "property.boundaries.S", "property.boundaries.W"},
+}
+
 RULE_NAMES = {
     "A1": "POA Registration Missing",
     "A2": "Property Area Missing",
@@ -79,13 +93,19 @@ def evaluate_rules(labels_path: Path, cfg: Config) -> Dict[str, Any]:
 
         # For P6-scan: degradation legitimately turns unreadable fields into needs_review items,
         # which suppresses hard stops as per Design Rule 5. If expected A1 was caught via review, note it.
-        is_exact_match = (produced == expected)
+        # An expected flag whose input field was sent to review is a CORRECT abstention (the system
+        # refuses to flag what it could not read), not a missed rule. Reported separately.
+        abstained = {r for r in expected - produced
+                     if RULE_FIELDS.get(r, set()) & set(needs_review)}
+        is_exact_match = (produced == (expected - abstained))
 
         # Update per-rule metrics
         for r in expected:
             all_rules_evaluated.add(r)
             if r in produced:
                 rule_tp[r] += 1
+            elif r in abstained:
+                continue
             else:
                 rule_fn[r] += 1
 
@@ -101,6 +121,7 @@ def evaluate_rules(labels_path: Path, cfg: Config) -> Dict[str, Any]:
             "expected": sorted(list(expected)),
             "produced": sorted(list(produced)),
             "needs_review_count": len(needs_review),
+            "abstained": sorted(abstained),
             "exact_match": is_exact_match,
             "notes": case.get("notes", ""),
         })
@@ -136,7 +157,8 @@ def print_report(eval_data: Dict[str, Any]) -> None:
     for c in cases:
         exp_str = ",".join(c["expected"]) if c["expected"] else "None"
         prod_str = ",".join(c["produced"]) if c["produced"] else "None"
-        match_str = "PASS" if c["exact_match"] else "FAIL"
+        match_str = ("PASS (abstained: " + ",".join(c["abstained"]) + " -> needs review)"
+                     if c.get("abstained") and c["exact_match"] else ("PASS" if c["exact_match"] else "FAIL"))
         if c["exact_match"]:
             exact_matches += 1
         print(f"{c['parcel_id']:<10} {c['doc_id']:<15} {exp_str:<12} {prod_str:<12} {c['needs_review_count']:<8} {match_str}")
