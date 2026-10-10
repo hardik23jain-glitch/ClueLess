@@ -118,5 +118,65 @@
       "consideration": 450000,
       "stamp_duty": 31500
     }
+  },
+  {
+    "doc_id": "HINDI-1",
+    "condition": "clean",
+    "language": "hi",
+    "fields": {
+      "doc_type": "sale_deed",
+      "registered": true,
+      "registration_no": "4821/2021",
+      "execution_date": "2021-03-12",
+      "presentation_date": "2021-03-20",
+      "seller.name": "रमेश कुमार",
+      "seller.relation_name": "मोहन कुमार",
+      "buyer.name": "सुनीता देवी",
+      "buyer.relation_name": "अनिल कुमार",
+      "party.id_type": "aadhaar",
+      "acting_through_poa.is_attorney": true,
+      "acting_through_poa.poa_reg_no": null,
+      "property.ulpin": null,
+      "property.survey_no": "123",
+      "property.area_value": 1200,
+      "property.area_unit": "sqft",
+      "property.boundaries.N": "सार्वजनिक सड़क",
+      "property.boundaries.E": "दिलीप दास की भूमि",
+      "property.boundaries.S": "रीना बोरा की भूमि",
+      "property.boundaries.W": "नाला",
+      "parent_ref.claimed_acquisition_year": 2015,
+      "consideration": 450000,
+      "stamp_duty": 31500
+    }
+  },
+  {
+    "doc_id": "HINDI-1-scan",
+    "condition": "degraded",
+    "language": "hi",
+    "fields": {
+      "doc_type": "sale_deed",
+      "registered": true,
+      "registration_no": "4821/2021",
+      "execution_date": "2021-03-12",
+      "presentation_date": "2021-03-20",
+      "seller.name": "रमेश कुमार",
+      "seller.relation_name": "मोहन कुमार",
+      "buyer.name": "सुनीता देवी",
+      "buyer.relation_name": "अनिल कुमार",
+      "party.id_type": "aadhaar",
+      "acting_through_poa.is_attorney": true,
+      "acting_through_poa.poa_reg_no": null,
+      "property.ulpin": null,
+      "property.survey_no": "123",
+      "property.area_value": 1200,
+      "property.area_unit": "sqft",
+      "property.boundaries.N": "सार्वजनिक सड़क",
+      "property.boundaries.E": "दिलीप दास की भूमि",
+      "property.boundaries.S": "रीना बोरा की भूमि",
+      "property.boundaries.W": "नाला",
+      "parent_ref.claimed_acquisition_year": 2015,
+      "consideration": 450000,
+      "stamp_duty": 31500
+    }
   }
 ]

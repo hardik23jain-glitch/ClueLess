@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import difflib
 import re
+import unicodedata
 
 try:  # pragma: no cover - depends on environment
     from rapidfuzz import fuzz as _rf
@@ -28,8 +29,12 @@ def normalize_digits(text: str) -> str:
 def norm(text: str) -> str:
     """Lowercase, Indic digits -> ASCII, punctuation -> space, collapse spaces.
     Keeps letters from every script (so Devanagari/Bengali words survive)."""
-    t = normalize_digits(text or "").lower()
-    t = re.sub(r"[^\w\s]|_", " ", t, flags=re.UNICODE)
+    # NFC first: "ड़" can be one code point or ड + nukta, and the two must compare equal.
+    t = unicodedata.normalize("NFC", normalize_digits(text or "")).lower()
+    # Keep letters, digits AND combining marks. Devanagari/Bengali vowel signs (matras) and the
+    # virama are marks, not "word" characters, so a plain \w regex would split every Hindi word
+    # at each matra.
+    t = "".join(ch if (ch.isalnum() or unicodedata.category(ch).startswith("M")) else " " for ch in t)
     return re.sub(r"\s+", " ", t).strip()
 
 

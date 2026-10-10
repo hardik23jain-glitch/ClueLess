@@ -95,7 +95,8 @@ def _digits_only(t: str) -> str:
     # Strip punctuation glued to the token: "0124." at the end of a sentence,
     # "(2345", "6789," etc. Without this a number followed by a full stop
     # slipped through unredacted.
-    d = normalize_digits(t).strip(".,;:()[]{}'\"-")
+    # "।" / "॥" are the Hindi/Assamese full stops (danda): they end sentences just like "."
+    d = normalize_digits(t).strip(".,;:()[]{}'\"-।॥|")
     return d if d.isdigit() else ""
 
 

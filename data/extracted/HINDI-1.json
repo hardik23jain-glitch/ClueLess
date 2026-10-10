@@ -1,0 +1,459 @@
+{
+  "doc_id": "HINDI-1",
+  "provenance": {
+    "file_sha256": "110b1c65acd34a26226004371f1d13c728d94ad97e51b384171adcee0a2ed2b0",
+    "file_name": "HINDI-1.pdf",
+    "pages": 2,
+    "extraction_method": "vision_llm",
+    "provider": "gemini",
+    "model_version": "gemini-flash-latest",
+    "prompt_version": "v1.1-5",
+    "contract_version": "1.1",
+    "cache_key": "8034ba940f8f7375abaabe5d",
+    "extracted_at": "2026-10-10T12:17:37+00:00",
+    "extraction_hash": "22b72608f4342f50d803be073dd65cb202326ba32591178681f6a916d48c8277",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 1,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "text_layer",
+    "review": "ran: 0/1 fields recovered",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "विक्रय पत्र (बैनामा)",
+        "bbox": [
+          613.1,
+          177.8,
+          473.7,
+          81.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "पंजीकरण संख्या: 4821/2021 उप-पंजीयक कार्यालय, कामरूप (महानगर), गुवाहाटी में पंजीकृत।",
+        "bbox": [
+          160.4,
+          330.0,
+          1343.5,
+          255.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registration_no": {
+      "value": "4821/2021",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "पंजीकरण संख्या: 4821/2021",
+        "bbox": [
+          160.4,
+          330.0,
+          472.1,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": "2021-03-12",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "दिनांक 12/03/2021 को गुवाहाटी में निम्नलिखित पक्षकारों के मध्य निष्पादित किया गया",
+        "bbox": [
+          160.4,
+          530.0,
+          1256.8,
+          255.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": "2021-03-20",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "दिनांक 20/03/2021 को पंजीकरण हेतु प्रस्तुत किया गया।",
+        "bbox": [
+          334.6,
+          1292.5,
+          905.1,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": "रमेश कुमार",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "विक्रेता: श्री रमेश कुमार",
+        "bbox": [
+          160.4,
+          730.0,
+          374.0,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": "मोहन कुमार",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "पुत्र श्री मोहन कुमार",
+        "bbox": [
+          545.9,
+          730.0,
+          314.7,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": "सुनीता देवी",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "क्रेता: श्रीमती सुनीता देवी",
+        "bbox": [
+          160.4,
+          1050.9,
+          390.6,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": "अनिल कुमार",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "पत्नी श्री अनिल कुमार",
+        "bbox": [
+          562.4,
+          1050.9,
+          340.6,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "विक्रेता का पहचान प्रमाण: आधार",
+        "bbox": [
+          160.4,
+          930.0,
+          521.0,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.is_attorney": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "जो अपने विधिवत नियुक्त मुख्तार श्री अनिल शर्मा के माध्यम से कार्य कर रहे हैं।",
+        "bbox": [
+          160.4,
+          730.0,
+          1278.6,
+          134.6
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 2,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": "123",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "सर्वे नंबर 123",
+        "bbox": [
+          160.4,
+          286.3,
+          221.9,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_value": {
+      "value": null,
+      "candidate": null,
+      "status": "unreadable",
+      "confidence": 0.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": [
+        "model did not return this field"
+      ]
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "कुल क्षेत्रफल 1220 वर्ग फुट।",
+        "bbox": [
+          1052.4,
+          286.3,
+          447.8,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.N": {
+      "value": "सार्वजनिक सड़क",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "उत्तर: सार्वजनिक सड़क",
+        "bbox": [
+          160.4,
+          486.3,
+          374.7,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": "दिलीप दास की भूमि",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "पूर्व: दिलीप दास की भूमि",
+        "bbox": [
+          160.4,
+          565.5,
+          389.0,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": "रीना बोरा की भूमि",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "दक्षिण: रीना बोरा की भूमि",
+        "bbox": [
+          160.4,
+          644.6,
+          403.1,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": "नाला",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "पश्चिम: नाला",
+        "bbox": [
+          160.4,
+          723.8,
+          188.6,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": "1187/2015",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "विलेख संख्या 1187/2015 दिनांक 04/08/2015",
+        "bbox": [
+          484.7,
+          1171.7,
+          921.7,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2015,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 1,
+        "quote": "दिनांक 04/08/2015 द्वारा प्राप्त की थी।",
+        "bbox": [
+          160.4,
+          1171.7,
+          1371.0,
+          176.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": 450000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "रुपये 4,50,000",
+        "bbox": [
+          418.0,
+          844.6,
+          328.5,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "stamp_duty": {
+      "value": 31500.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.996,
+      "evidence": {
+        "page": 2,
+        "quote": "रुपये 31,500",
+        "bbox": [
+          372.5,
+          1044.6,
+          209.4,
+          55.4
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    }
+  },
+  "needs_review": [
+    "property.area_value"
+  ],
+  "language": "hi",
+  "writing": "printed",
+  "overall_confidence": 0.951,
+  "retake_required": false
+}

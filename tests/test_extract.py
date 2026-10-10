@@ -103,6 +103,17 @@ def test_redaction_survives_trailing_punctuation():
     assert counts["aadhaar"] == 1 and len(boxes) == 3
 
 
+def test_redaction_handles_devanagari_digits_and_danda():
+    from extract.ingest import Word
+    from extract.redact import find_sensitive_boxes
+
+    dev = str.maketrans("0123456789", "०१२३४५६७८९")
+    parts = AADHAAR_SPACED.translate(dev).split()
+    toks = ["आधार", parts[0], parts[1], parts[2] + "।"]                  # danda glued to the last group
+    boxes, counts = find_sensitive_boxes([Word(t, i * 50, 10, 40, 10) for i, t in enumerate(toks)])
+    assert counts["aadhaar"] == 1 and len(boxes) == 3
+
+
 # ---------------------------------------------------------------- validation
 @pytest.mark.parametrize("key,value,ok,expected", [
     ("execution_date", "12/03/2021", True, "2021-03-12"),
