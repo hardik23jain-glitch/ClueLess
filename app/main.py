@@ -294,8 +294,8 @@ def render_flag_card(flag: Dict[str, Any], class_type: str) -> None:
     rule_id = flag.get("flag_id", flag.get("rule_id", ""))
     field_path = flag.get("field_path", "")
     kind = class_type.lower()
-    label = {"A": "Class A · Registrability", "B": "Class B · Advisory (not a refusal ground)",
-             "R": "Needs review · could not be read"}[class_type]
+    label = {"A": "🛑 Class A · Registrability", "B": "⚠️ Class B · Advisory (not a refusal ground)",
+             "R": "🔎 Needs review · could not be read"}[class_type]
 
     citation = ""
     ev_list = flag.get("evidence", [])
@@ -309,13 +309,16 @@ def render_flag_card(flag: Dict[str, Any], class_type: str) -> None:
 
     mitigation = flag.get("mitigation", "")
     H(
-        f'<div class="fcard {kind}"><div class="top">{chip(rule_id or "R", kind)}'
+        f'<div class="fcard {kind}" style="margin-bottom:.3rem"><div class="top">{chip(rule_id or "R", kind)}'
         f'<span class="ttl">{esc(title)}</span></div>'
-        f'<div style="margin-bottom:.4rem">{chip(label, kind)}<code>{esc(code)}</code>'
-        f'{f" <code>{esc(field_path)}</code>" if field_path else ""}</div>'
-        f'<div class="dtl">{esc(flag.get("detail", ""))}</div>'
-        f'{f"<div class=mit><b>Next step:</b> {esc(mitigation)}</div>" if mitigation else ""}{citation}</div>'
+        f'<div style="margin-bottom:.2rem">{chip(label, kind)}<code>{esc(code)}</code>'
+        f'{f" <code>{esc(field_path)}</code>" if field_path else ""}</div>{citation}</div>'
     )
+    # Details and next step stay one click away so the page is not a wall of text.
+    with st.expander("Details and next step"):
+        st.write(flag.get("detail", ""))
+        if mitigation:
+            st.markdown(f"**Next step:** {mitigation}")
 
 
 def render_evidence_states(ex: DeedExtraction, flags_a: List[Dict], flags_b: List[Dict], needs_review: List[Dict]) -> None:
@@ -393,7 +396,8 @@ def screen_citizen_preflight() -> None:
         st.error("Could not load extraction data for the selected document.")
         return
 
-    analysis = run_risk_analysis(draft_doc, bundle_docs)
+    with st.spinner("Analyzing… 🛡️"):
+        analysis = run_risk_analysis(draft_doc, bundle_docs)
     class_a = analysis.get("class_a_flags", [])
     class_b = analysis.get("class_b_flags", [])
     needs_review = analysis.get("needs_review", [])
@@ -469,9 +473,14 @@ def screen_citizen_preflight() -> None:
                 empty("No extra documents requested based on what was uploaded.")
 
             section("Advocate hand-off brief", "Fixed wording, no AI-written legal text.")
+            brief_md = build_brief(analysis, req_items)
+            st.info("This brief is a document analysis and a question list for your advocate. "
+                    "It is not a legal opinion and does not guarantee title.")
+            with st.expander("Preview the brief", expanded=True):
+                st.markdown(brief_md)
             st.download_button(
                 label="📄 Download advocate brief (Markdown)",
-                data=build_brief(analysis, req_items),
+                data=brief_md,
                 file_name=f"advocate_brief_{draft_doc.doc_id}.md",
                 mime="text/markdown",
                 use_container_width=True,
@@ -560,14 +569,15 @@ def screen_officer_console() -> None:
             if missing:
                 st.error(f"Missing disposition decisions for: {', '.join(missing)}")
                 return
-            result = commit_to_ledger(
-                parcel_ulpin=parcel_ulpin,
-                draft_deed_json=draft_doc,
-                parent_deed_json_list=bundle_docs,
-                all_flags_dicts=all_flags,
-                officer_dispositions=dispositions,
-                officer_id=officer_id,
-            )
+            with st.spinner("Signing and recording… 🛡️"):
+                result = commit_to_ledger(
+                    parcel_ulpin=parcel_ulpin,
+                    draft_deed_json=draft_doc,
+                    parent_deed_json_list=bundle_docs,
+                    all_flags_dicts=all_flags,
+                    officer_dispositions=dispositions,
+                    officer_id=officer_id,
+                )
             st.balloons()
             H(
                 '<div class="receipt"><b style="color:#065f46">✅ Decision recorded in the tamper-evident ledger</b>'
@@ -600,7 +610,8 @@ def screen_ledger_verify() -> None:
     ])
 
     if st.button("🔍 Verify entire chain and signatures", type="primary"):
-        ok, bad_idx, reason = sg.verify_signatures()
+        with st.spinner("Verifying hashes and signatures… 🛡️"):
+            ok, bad_idx, reason = sg.verify_signatures()
         if ok:
             st.success("Chain verified: every SHA-256 hash and Ed25519 signature matches.")
         else:
