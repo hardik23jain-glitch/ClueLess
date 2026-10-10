@@ -1,7 +1,7 @@
 """
 End-to-end demo of P1 -> P2 on real extractions, using a throwaway ledger so P2's DB is untouched.
     python -m scripts.demo_flow                (uses data/extracted/SAMPLE-1.json)
-It prints: flags with evidence, the advocate brief (also written to advocate_brief.md), the signed
+It prints: flags with evidence, the advocate brief (written to the temp folder), the signed
 ledger entry, a verification, then a tamper test.
 """
 
@@ -31,8 +31,9 @@ for k in ("class_a_flags", "class_b_flags", "needs_review"):
         print(f"{f['flag_id']:3} {f['code']:28} page={ev.get('page')} quote={str(ev.get('quote'))[:50]!r}")
 
 brief = build_brief(res, build_request_list(ex))
-open("advocate_brief.md", "w", encoding="utf-8").write(brief)
-print("\n== advocate_brief.md written (static library, no LLM) ==")
+brief_path = os.path.join(tmp, "advocate_brief.md")
+open(brief_path, "w", encoding="utf-8").write(brief)
+print(f"\n== advocate brief built from the static library (no LLM): {brief_path} ==")
 
 flags = res["class_a_flags"] + res["class_b_flags"]
 disp = {f["flag_id"]: {"action": "RETURN_FOR_CORRECTION" if f["class"] == "A" else "PARTIES_INFORMED",

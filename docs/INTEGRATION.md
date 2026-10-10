@@ -48,7 +48,7 @@ from extract import build_request_list
 from rules.advocate_brief import build_brief
 brief_md = build_brief(result, build_request_list(draft_extraction))
 ```
-The brief is built from a fixed wording library (no LLM). `brief_agent.mjs` is deprecated.
+The brief is built from a fixed wording library (no LLM), so it never implies a title conclusion.
 
 ## 5. Record the officer's decision
 

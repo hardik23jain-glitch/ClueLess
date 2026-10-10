@@ -70,11 +70,18 @@ pip install -r requirements.txt
 python -m extract.run data\raw\SAMPLE-1.pdf      # extract one deed -> data\extracted\SAMPLE-1.json
 python -m scripts.show_extraction SAMPLE-1       # readable summary
 python -m scripts.demo_flow                      # extraction -> rules -> brief -> signed ledger -> tamper test
-python -m pytest tests -q                        # 41 offline tests (no network, Tesseract or Node needed)
+python -m pytest tests -q                        # 75 offline tests (no network, Tesseract or Node needed)
 python -m eval.eval_extraction                   # accuracy report against data/labels
 ```
 
-The Streamlit app is P3's (`app/`, not yet in this repo): it should call `integration.run_risk_analysis` and `integration.commit_to_ledger`. See [docs/INTEGRATION.md](docs/INTEGRATION.md).
+Run the app (works offline from the cached sample extractions in `data/extracted/`):
+
+```powershell
+streamlit run app/main.py        # Citizen pre-flight · Sub-Registrar console · Ledger verify
+python -m eval.eval_rules        # rule precision/recall on the planted-defect dataset (synthetic)
+```
+
+The app calls `integration.run_risk_analysis` and `integration.commit_to_ledger`. See [docs/INTEGRATION.md](docs/INTEGRATION.md).
 
 ## Results (synthetic data, so read with care)
 
@@ -112,7 +119,8 @@ One wrong value was accepted (a heavily blurred "Rina Bora" read as "Boro"). Abs
 | `eval/`, `data/labels/` | Accuracy report and ground-truth labels |
 | `data/raw/`, `data/extracted/` | Synthetic sample documents and their cached extraction JSON |
 | `scripts/` | Sample generators (English, scans, Hindi, handwriting-style) and diagnostics |
-| `tests/` | 41 offline tests |
+| `app/` | Streamlit app (citizen pre-flight, officer console, ledger verify) |
+| `tests/` | 75 offline tests |
 
 ## Deliverables checklist
 
