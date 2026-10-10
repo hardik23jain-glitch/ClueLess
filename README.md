@@ -87,7 +87,7 @@ The app calls `integration.run_risk_analysis` and `integration.commit_to_ledger`
 
 ## Results (synthetic data, so read with care)
 
-Measured on 8 documents / 161 labelled fields (prompt v1.1-5): clean and degraded English scans, a Hindi deed (digital and scanned, Devanagari digits) and a handwriting-style deed.
+Measured on 7 documents / 161 labelled fields (prompt v1.1-5): clean and degraded English scans, a Hindi deed (digital and scanned, Devanagari digits) and a handwriting-style deed.
 
 | Slice | Fields | Accuracy on accepted fields | Abstained (sent to review) |
 |---|---|---|---|
