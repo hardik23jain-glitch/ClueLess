@@ -1,0 +1,460 @@
+{
+  "doc_id": "SAMPLE-1-scan-mild",
+  "provenance": {
+    "file_sha256": "d29d76beb14284a6f7e3d89a14b0f3e9fce6b7924235134fbd2aba16cb8329d8",
+    "file_name": "SAMPLE-1-scan-mild.pdf",
+    "pages": 2,
+    "extraction_method": "vision_llm",
+    "provider": "gemini",
+    "model_version": "gemini-flash-latest",
+    "prompt_version": "v1.1-5",
+    "contract_version": "1.1",
+    "cache_key": "369a5a638722dfdd21656d0b",
+    "extracted_at": "2026-10-10T11:51:04+00:00",
+    "extraction_hash": "44aa7d1092ed5d5b654c8503f5ae427593d10496e5969fc644da924e7c2332cc",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 1,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "tesseract",
+    "review": "not_needed",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "SALE DEED",
+        "bbox": [
+          140.0,
+          201.0,
+          154.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "Registered at Sub-Registrar Office, Kamrup (Metro), Guwahati",
+        "bbox": [
+          540.0,
+          268.0,
+          766.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registration_no": {
+      "value": "4821/2021",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "Registration No: 4821/2021",
+        "bbox": [
+          141.0,
+          268.0,
+          332.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": "2021-03-12",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "This Deed of Sale is executed on 12/03/2021",
+        "bbox": [
+          139.0,
+          401.0,
+          585.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": "2021-03-20",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "The deed was presented for registration on 20/03/2021.",
+        "bbox": [
+          139.0,
+          868.0,
+          683.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": "Ramesh Kumar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "SELLER: Ramesh Kumar",
+        "bbox": [
+          140.0,
+          468.0,
+          320.0,
+          25.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": "Mohan Kumar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "son of Mohan Kumar",
+        "bbox": [
+          470.0,
+          468.0,
+          264.0,
+          25.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": "Sunita Devi",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "BUYER: Sunita Devi",
+        "bbox": [
+          140.0,
+          668.0,
+          258.0,
+          25.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": "Anil Devi",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "wife of Anil Devi",
+        "bbox": [
+          407.0,
+          668.0,
+          204.0,
+          25.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": "aadhaar",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "Seller's identity proof: Aadhaar",
+        "bbox": [
+          140.0,
+          535.0,
+          902.0,
+          94.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.is_attorney": {
+      "value": true,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "acting through his duly constituted attorney Anil Sharma under a General Power of Attorney.",
+        "bbox": [
+          139.0,
+          469.0,
+          1193.0,
+          94.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 0.95,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": "123",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "Survey No 123",
+        "bbox": [
+          141.0,
+          267.0,
+          189.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_value": {
+      "value": 1200.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "Total area 1200 sq ft.",
+        "bbox": [
+          879.0,
+          268.0,
+          261.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_unit": {
+      "value": "sqft",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "sq ft.",
+        "bbox": [
+          1082.0,
+          269.0,
+          58.0,
+          27.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.N": {
+      "value": "Public road",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "North: Public road",
+        "bbox": [
+          142.0,
+          400.0,
+          220.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": "Land of Dilip Das",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "East: Land of Dilip Das",
+        "bbox": [
+          142.0,
+          467.0,
+          280.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": "Land of Rina Bora",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "South: Land of Rina Bora",
+        "bbox": [
+          141.0,
+          533.0,
+          311.0,
+          24.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": "Drain",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "West: Drain",
+        "bbox": [
+          140.0,
+          600.0,
+          144.0,
+          23.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": "Deed No. 1187 of 2015 dated 04/08/2015",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "Deed No. 1187 of 2015 dated 04/08/2015.",
+        "bbox": [
+          139.0,
+          802.0,
+          954.0,
+          89.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": 2015,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "Deed No. 1187 of 2015 dated 04/08/2015.",
+        "bbox": [
+          139.0,
+          802.0,
+          954.0,
+          89.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": 450000.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "Sale consideration: Rs 4,50,000",
+        "bbox": [
+          141.0,
+          733.0,
+          505.0,
+          29.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "stamp_duty": {
+      "value": 31500.0,
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 2,
+        "quote": "Stamp duty paid: Rs 31,500",
+        "bbox": [
+          141.0,
+          800.0,
+          341.0,
+          28.0
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    }
+  },
+  "needs_review": [],
+  "language": "en",
+  "writing": "printed",
+  "overall_confidence": 0.998,
+  "retake_required": false
+}

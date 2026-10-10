@@ -1,0 +1,37 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Ledger demo state + signing secrets (generated on first use)
+ledger/audit_log.db
+ledger/signing_key.pem
+ledger/commit_salt.bin
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Node (Cline review agent)
+node_modules/
+
+# Raw LLM replies (regenerable; can be large). data/extracted/ is deliberately NOT ignored:
+# P2/P3 need the cached extraction JSON as the demo fallback (synthetic + redacted, no personal data).
+data/cache/
+
+# Third-party downloads (government model forms etc.): don't redistribute
+data/downloads/
+
+# Documents that may contain personal data: keep real uploads out of git.
+# Synthetic samples in data/raw/ and data/mock/ ARE meant to be committed.
+data/private/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

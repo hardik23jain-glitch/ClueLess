@@ -1,0 +1,10 @@
+pydantic>=2.5
+numpy
+opencv-python
+PyMuPDF
+pytesseract          # also install the Tesseract binary + language packs (eng, hin, asm, mar)
+rapidfuzz            # optional; difflib fallback is used if absent
+python-dotenv
+google-genai         # if provider = gemini
+anthropic            # if provider = anthropic
+pytest

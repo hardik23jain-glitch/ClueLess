@@ -1,0 +1,20 @@
+{
+  "class_a": [
+    {
+      "severity": "HARD_STOP",
+      "category": "registrability",
+      "code": "POA_REGISTRATION_MISSING",
+      "title": "POA registration number missing",
+      "detail": "Document executed through POA but no registration number present."
+    }
+  ],
+  "class_b": [
+    {
+      "severity": "WARNING",
+      "category": "title_advisory",
+      "code": "PARALLEL_CONVEYANCE",
+      "title": "Possible parallel conveyance in registry index",
+      "detail": "Registry index shows ULPIN 'AS-104' was also conveyed to 'Vikram Singh' in 2015."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "landguard-cline-review-agent",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@cline/sdk": "latest"
+  }
+}

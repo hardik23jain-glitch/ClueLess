@@ -1,0 +1,360 @@
+{
+  "doc_id": "DELHI-SALE",
+  "provenance": {
+    "file_sha256": "cec822acd11153a2623704ae9ebe6e5451d4d0d9dcc7c1b2b7f90828e2851e0d",
+    "file_name": "doc.pdf",
+    "pages": 3,
+    "extraction_method": "vision_llm",
+    "provider": "gemini",
+    "model_version": "gemini-2.5-flash",
+    "prompt_version": "v1.1-5",
+    "contract_version": "1.1",
+    "cache_key": "ec1cbeff091cc9aaf4832101",
+    "extracted_at": "2026-10-10T11:11:02+00:00",
+    "extraction_hash": "d8900d1d79632e4b039b6b70f46c005b0ead8b260b1027aa78d3bc4d6b641ae5",
+    "redaction": {
+      "status": "verified",
+      "aadhaar": 0,
+      "vid": 0,
+      "pan": 0,
+      "pages_unverified": []
+    },
+    "quality": {
+      "acceptable": true,
+      "retake": false,
+      "reasons": []
+    },
+    "local_text": "text_layer",
+    "review": "not_needed",
+    "warnings": []
+  },
+  "fields": {
+    "doc_type": {
+      "value": "sale_deed",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": "SALE DEED",
+        "bbox": [
+          806.0,
+          439.3,
+          185.1,
+          33.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registered": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "registration_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "execution_date": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "presentation_date": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.name": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "seller.relation_name": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.name": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "buyer.relation_name": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "party.id_type": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.is_attorney": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "acting_through_poa.poa_reg_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.ulpin": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.survey_no": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_value": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.area_unit": {
+      "value": "sqyd",
+      "candidate": null,
+      "status": "extracted",
+      "confidence": 0.96,
+      "evidence": {
+        "page": 1,
+        "quote": "Sq. Yrds",
+        "bbox": [
+          624.7,
+          1825.3,
+          114.0,
+          33.3
+        ]
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.N": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.E": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.S": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "property.boundaries.W": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.doc_ref": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "parent_ref.claimed_acquisition_year": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": null,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "consideration": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    },
+    "stamp_duty": {
+      "value": null,
+      "candidate": null,
+      "status": "absent",
+      "confidence": 1.0,
+      "evidence": {
+        "page": 1,
+        "quote": null,
+        "bbox": null
+      },
+      "source": "vision_llm",
+      "notes": []
+    }
+  },
+  "needs_review": [],
+  "language": "en",
+  "writing": "printed",
+  "overall_confidence": 0.998,
+  "retake_required": false
+}
