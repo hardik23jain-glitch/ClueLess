@@ -1,8 +1,8 @@
-# ClueLess: Dharti Kaaval (धरती காவல்)
+# ClueLess: Bhoomi Kaaval (भूमि காவல்)
 
-*Dharti* (Hindi: earth) + *Kaaval* (Tamil: guard). The product was developed under the working name LandGuard AI, which still appears in some file names and code.
+*Bhoomi* (Sanskrit/Hindi: land) + *Kaaval* (Tamil: guard). The product was developed under the working name LandGuard AI, which still appears in some file names and code.
 
-Pre-transaction risk-prevention layer for Indian property registration. Dharti Kaaval reads deed bundles, flags registrability problems and ownership-history advisories with page-level evidence, and records every Sub-Registrar decision in a tamper-evident, signed log. **It never certifies title.**
+Pre-transaction risk-prevention layer for Indian property registration. Bhoomi Kaaval reads deed bundles, flags registrability problems and ownership-history advisories with page-level evidence, and records every Sub-Registrar decision in a tamper-evident, signed log. **It never certifies title.**
 
 Built for the Cline AI Builder Hackathon (Round 2).
 
