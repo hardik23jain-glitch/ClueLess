@@ -87,7 +87,9 @@ html, body, [class*="css"], .stApp { font-family: "Segoe UI", "Inter", system-ui
 .chip.r{ background:var(--r-bg); color:#1e40af; border-color:#bfdbfe; }
 .chip.ok{ background:var(--ok-bg); color:#065f46; border-color:#a7f3d0; }
 .chip.n{ background:#f1f5f9; color:#475569; border-color:#cbd5e1; }
-.chip.brand{ background:#eef2ff; color:#3730a3; border-color:#c7d2fe; }
+.chip.ind{ background:#eef2ff; color:#3730a3; border-color:#c7d2fe; }
+.meta{ display:flex; flex-wrap:wrap; gap:.5rem 1.8rem; align-items:center; margin:.2rem 0 .8rem; }
+.meta .grp{ display:inline-flex; align-items:center; gap:.45rem; }
 
 /* flag cards */
 .fcard{ background:var(--card); border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:12px;
@@ -151,6 +153,10 @@ html, body, [class*="css"], .stApp { font-family: "Segoe UI", "Inter", system-ui
 section[data-testid="stSidebar"]{ background:linear-gradient(180deg,#0f172a,#1e1b4b); }
 section[data-testid="stSidebar"] *{ color:#e2e8f0; }
 section[data-testid="stSidebar"] .stSelectbox label, section[data-testid="stSidebar"] .stRadio label{ color:#e2e8f0 !important; }
+/* inputs inside the dark sidebar sit on white: keep their text dark */
+section[data-testid="stSidebar"] div[data-baseweb="select"] *{ color:#0f172a !important; }
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] *{ color:#0f172a !important; }
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button{ color:#0f172a !important; }
 .brand{ display:flex; align-items:center; gap:.6rem; margin-bottom:.2rem; }
 .brand .logo{ width:38px; height:38px; border-radius:11px; background:linear-gradient(135deg,#6366f1,#a855f7);
   display:flex; align-items:center; justify-content:center; font-size:1.2rem; box-shadow:0 4px 12px rgba(99,102,241,.5); }
@@ -393,12 +399,12 @@ def screen_citizen_preflight() -> None:
     needs_review = analysis.get("needs_review", [])
 
     parents = "".join(chip(b.doc_id, "n") for b in bundle_docs) or chip("none", "n")
-    H(f'<div style="margin:.2rem 0 .6rem"><b>Deed under review</b> {chip(draft_doc.doc_id, "brand")}'
-      f' &nbsp; <b>Earlier deeds in the chain</b> {parents}</div>')
+    H(f'<div class="meta"><span class="grp"><b>Deed under review</b>{chip(draft_doc.doc_id, "ind")}</span>'
+      f'<span class="grp"><b>Earlier deeds in the chain</b>{parents}</span></div>')
 
     tiles([
-        ("Class A · registrability", len(class_a), "#dc2626", "objective checks"),
-        ("Class B · advisories", len(class_b), "#d97706", "not refusal grounds"),
+        ("Class A", len(class_a), "#dc2626", "registrability checks"),
+        ("Class B", len(class_b), "#d97706", "advisories, not refusal grounds"),
         ("Needs review", len(needs_review), "#2563eb", "unreadable fields"),
         ("Fields read", sum(1 for f in draft_doc.fields.values() if f.status == FieldStatus.EXTRACTED),
          "#059669", f"of {len(draft_doc.fields)} checked"),
@@ -506,8 +512,8 @@ def screen_officer_console() -> None:
     all_flags = class_a + class_b
 
     tiles([
-        ("Class A flags", len(class_a), "#dc2626", "may justify refusal"),
-        ("Class B advisories", len(class_b), "#d97706", "record a disposition"),
+        ("Class A", len(class_a), "#dc2626", "may justify refusal"),
+        ("Class B", len(class_b), "#d97706", "advisories: record a disposition"),
         ("Unreadable fields", len(analysis.get("needs_review", [])), "#2563eb", "no flags raised on them"),
         ("Ruleset", RULESET_VERSION, "#4f46e5", "recorded in the ledger"),
     ])
