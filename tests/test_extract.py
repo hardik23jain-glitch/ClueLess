@@ -264,3 +264,23 @@ def test_human_correction(env):
     assert out.fields["stamp_duty"].status == FieldStatus.EXTRACTED and out.fields["stamp_duty"].value == 5000.0
     assert "stamp_duty" not in out.needs_review
     assert out.provenance.extraction_hash != before
+
+def test_missing_field_is_unreadable_not_absent(env):
+    """A field the model OMITS entirely must come back unreadable, never absent.
+
+    An 'absent' would be trusted as a real 'not stated' and could fire a Class A
+    rule on a field we never actually read. The prompt (rule 10) tells the model
+    to always return an object; classify.py enforces it here: a missing/non-dict
+    entry is unreadable and lands in needs_review.
+    """
+    pdf, cfg = env
+    reply = model_reply()
+    del reply["fields"]["property.area_value"]          # model forgets to return it
+    (Path(cfg.mock_dir) / "T-1.json").write_text(json.dumps(reply), encoding="utf-8")
+    ex = extract_deed(pdf, cfg=cfg)
+    f = ex.fields["property.area_value"]
+    assert f.status == FieldStatus.UNREADABLE
+    assert f.status != FieldStatus.ABSENT
+    assert f.value is None
+    assert "property.area_value" in ex.needs_review
+

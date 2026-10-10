@@ -40,6 +40,7 @@ RULES
 7. If the seller signs personally, acting_through_poa.is_attorney is false and acting_through_poa.poa_reg_no is null with state "not_stated". If the seller acts through an attorney but no registration number for the power of attorney is given, is_attorney is true and poa_reg_no is "not_stated".
 8. BLANK FORMS: many documents are templates with blanks such as "........", ". . . . .", "______" or "[ ]". A blank is NOT a value: use "not_stated" with quote null. NEVER copy a run of dots, underscores or dashes into any field. Quotes are at most 200 characters; if a quote would contain a long run of dots, shorten it to the label words only.
 9. Output a single JSON object, no prose, no markdown fences.
+10. COMPLETENESS: return one object for EVERY field listed in FIELDS TO EXTRACT. Never omit a field. If it is present but you cannot read it, use state \"illegible\"; if the document clearly does not contain it, use \"not_stated\". An omitted field is an error and is held back for review, so always include the object with a valid state.
 """
 
 RETRY_NOTE = ("\n\nIMPORTANT: your previous reply was not valid JSON (likely cut off by copying dotted or underscored blanks). "

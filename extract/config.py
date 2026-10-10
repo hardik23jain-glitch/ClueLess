@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # Bump when the prompt or contract changes: it is part of the cache key, so an
 # old cached extraction is never served for a new prompt.
-PROMPT_VERSION = "v1.1-5"
+PROMPT_VERSION = "v1.1-6"
 CONTRACT_VERSION = "1.1"
 
 
