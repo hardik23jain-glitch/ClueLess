@@ -1,5 +1,5 @@
 """
-LandGuard AI - Pre-Transaction Risk-Prevention Layer for Indian Property Registration.
+Dharti Kaaval - Pre-Transaction Risk-Prevention Layer for Indian Property Registration.
 Offline-capable Streamlit application, styled as a website (top navigation, landing page, steps).
 
 Pages:
@@ -41,7 +41,7 @@ from rules.advocate_brief import NOT_CHECKED, build_brief
 from rules.engine import HARD_STOP, RULESET_VERSION
 
 st.set_page_config(
-    page_title="LandGuard AI | Check property documents before you pay",
+    page_title="Dharti Kaaval | Check property documents before you pay",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -441,7 +441,7 @@ def render_fields_table(ex: DeedExtraction) -> None:
 def page_home() -> None:
     H(f'<div class="hero"><div><span class="eyebrow">Property documents · India</span>'
       f'<h1>Check your property papers <em>before</em> you pay.</h1>'
-      f'<p>LandGuard AI reads your deeds, runs fixed registration checks and shows exactly which page every finding comes from. '
+      f'<p>Dharti Kaaval reads your deeds, runs fixed registration checks and shows exactly which page every finding comes from. '
       f'It tells you what the documents support, what they contradict, and what nobody has checked. It never certifies title.</p></div>'
       f'<div class="art">{HERO_SVG}</div></div>')
 
@@ -472,13 +472,14 @@ def page_home() -> None:
 
     H('<div class="band"><h2>What we never do</h2></div>')
     notchecked = "".join(f"<li>{esc(i)}</li>" for i in NOT_CHECKED)
-    H('<div class="never"><h3>LandGuard AI does not certify title</h3>'
+    H('<div class="never"><h3>Dharti Kaaval does not certify title</h3>'
       '<ul><li>We never say a property is &ldquo;clean&rdquo; or &ldquo;safe&rdquo;, and we give no title score.</li>'
       '<li>&ldquo;Nothing found&rdquo; means only that nothing was found among the documents you uploaded.</li>'
       '<li>Things we did not check:</li></ul>'
       f'<ul style="margin-top:.2rem">{notchecked}</ul></div>')
 
-    H('<div class="sitefooter"><b>LandGuard AI</b> · Pre-registration risk layer for Indian property deeds<br>'
+    H('<div class="sitefooter"><b>Dharti Kaaval</b> · Pre-registration risk layer for Indian property deeds<br>'
+      'The name: <b>Dharti</b> (धरती, Hindi: earth) + <b>Kaaval</b> (காவல், Tamil: guard), the guardian of the land.<br>'
       'Document analysis and question lists only, not legal advice. Demo uses synthetic documents. '
       'Built for the Cline AI Builder Hackathon.</div>')
 
@@ -612,7 +613,7 @@ def page_citizen() -> None:
         with right:
             notchecked = "".join(f"<li>{esc(i)}</li>" for i in NOT_CHECKED)
             H('<div class="panel disclaimer"><h4>⚠️ What we did not check</h4>'
-              '<div style="font-size:.88rem;color:#78350f;margin-bottom:.3rem">LandGuard AI does not certify title. '
+              '<div style="font-size:.88rem;color:#78350f;margin-bottom:.3rem">Dharti Kaaval does not certify title. '
               'These items were not inspected:</div>'
               f'<ul>{notchecked}</ul>'
               '<div style="font-size:.84rem;color:#78350f"><i>An advocate should confirm possession, mutation and revenue records.</i></div></div>')
@@ -811,7 +812,7 @@ def main() -> None:
 
     brand, nav_col = st.columns([1.15, 3])
     with brand:
-        H('<div class="navbar"><div class="logo">🛡️</div><div class="nm">Land<span>Guard</span> AI</div></div>')
+        H('<div class="navbar"><div class="logo">🛡️</div><div class="nm">Dharti<span>Kaaval</span></div></div>')
     with nav_col:
         st.radio("Navigation:", NAV, horizontal=True, key="nav", label_visibility="collapsed")
     H('<hr class="nav">')
@@ -827,7 +828,7 @@ def main() -> None:
         page_ledger()
 
     if page != NAV[0]:
-        H(f'<div class="sitefooter"><b>LandGuard AI</b> · Ruleset {esc(RULESET_VERSION)} · cached offline demo data<br>'
+        H(f'<div class="sitefooter"><b>Dharti Kaaval</b> · Ruleset {esc(RULESET_VERSION)} · cached offline demo data<br>'
           'Deterministic rules · every finding cites page and quote · no “clean”, no title score · signed, tamper-evident log</div>')
 
 
